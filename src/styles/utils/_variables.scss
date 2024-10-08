@@ -11,7 +11,18 @@ $space-h3: $h3-size * 2;
 $space-h2: $h2-size * 2;
 $space-h1: $h1-size * 2;
 
+$line-height: 150%;
+
 
 // Override Bootstrap variables
+// Color
 $primary: #a333ff;
+
+// Button
 $btn-border-radius: 0px;
+
+// Card
+$card-border-radius: 0px;
+
+// TODO: Ajouter le line-height sur les textes;
+// TODO: Modifier les margin-bottom de chaque éléments avec les variables $space-*
