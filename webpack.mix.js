@@ -6,13 +6,13 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
+ | for your Laravel application. By default, nous compilons les fichiers Sass
+ | et JS, et maintenant nous copions également les fichiers PHP.
  |
  */
 
 mix
-  .copy('src/**/*.html', 'dist/')
+  .copy('src/**/*.php', 'dist/')
   .copyDirectory('src/assets', 'dist/assets')
   .js('src/scripts/app.js', 'dist/scripts/')
   .sass('src/styles/app.scss', 'styles/', { sassOptions: { outputStyle: 'expanded' } })
