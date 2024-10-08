@@ -1,20 +1,21 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mon Site</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.php">À propos</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar bg-dark border-bottom border-body p-3" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mon site</a>
+
+            <ul class="navbar-nav d-flex flex-row gap-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Présentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fonctionnalités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trailer</a>
+                </li>
+            </ul>
+
+            <button class="btn btn-primary" id="toggleMode">Dark Mode</button>
         </div>
     </nav>
 </header>

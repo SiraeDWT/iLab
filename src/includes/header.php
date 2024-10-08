@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" data-bs-theme="light">
 <head>
 <title>iLab • </title>
     <meta charset="UTF-8">
