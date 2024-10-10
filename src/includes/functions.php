@@ -11,6 +11,8 @@ function addTitle(){
         return "Découvrez notre projet • iLabrador";
     } elseif($file == 'app.php'){
         return "Expérimentez • iLabrador";
+    } elseif($file == 'credits.php'){
+        return "Crédits • iLabrador";
     } else{
         return "iLabrador";
     }
@@ -19,17 +21,17 @@ function addTitle(){
 function addDescription(){
     $file = getPage();
 
-    if($file == 'index.php'){
-        return "";
+    if($file == 'index.php' || $file == 'credits.php'){
+        return "Découvrez notre application qui vous offre une expérience narrative à propos des difficultés quotidiennes rencontrées par les personnes malvoyantes.";
     } elseif($file == 'app.php'){
-        return "";
+        return "Découvrez le quotidien d'une personne malvoyante ainsi que toutes les difficultés que cela implique à travers les explications d'un chien-guide nommé iLabrador.";
     } else{
         return "";
     }
 }
 
 function addTags(){
-    $tags = ['iLab', 'Sensibilisation', 'Dylan Vercalsteren', 'Thibault Varga', 'Noa Jacquemin', 'Éleonore Koterko', 'Xavier-Philippe Renk', 'DWT', 'HEAJ', 'UX Design', 'UI Design', 'Design Web', 'Développement Web'];
+    $tags = ['iLab', 'Sensibilisation', 'PMR', 'Dylan Vercalsteren', 'Thibault Varga', 'Noa Jacquemin', 'Éleonore Koterko', 'Xavier-Philippe Renk', 'DWT', 'HEAJ', 'UX Design', 'UI Design', 'Design Web', 'Développement Web'];
     $display_tags = implode(', ', $tags);
 
     return $display_tags;
