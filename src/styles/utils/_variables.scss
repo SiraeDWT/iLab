@@ -16,17 +16,7 @@ $space-h1: $h1-size * 2;
 $line-height: 150%;
 
 $luciole: 'Luciole', sans-serif; // 400 - 700 - Italic
+$verdana: "verdana-pro", sans-serif;
 
 
-// Override Bootstrap variables
-// Color
 $primary: #a333ff;
-
-// Button
-$btn-border-radius: 0px;
-
-// Card
-$card-border-radius: 0px;
-
-// TODO: Ajouter le line-height sur les textes;
-// TODO: Modifier les margin-bottom de chaque éléments avec les variables $space-*
