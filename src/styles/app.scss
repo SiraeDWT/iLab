@@ -107,6 +107,8 @@ a{
     &__el a{
         font-size: $p-size;
         padding: 10px;
+        color: $beige-color;
+        text-decoration: none;
     }
 
     &__dwt{
@@ -146,7 +148,7 @@ a{
         }
         
         &__und{
-            fill: $primary-color;
+            fill: $beige-color;
         }
     }   
 }
