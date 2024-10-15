@@ -103,7 +103,7 @@ a{
     align-items: center;
 
     &__logo{
-        width: 80px;
+        width: 50px;
     }
 
     &__list{
@@ -147,16 +147,22 @@ a{
 }
 
 .intro{
-    width: 100%;
     background-color: $blue-color;
     padding: calc($space-h1*2) 0 $space-h1;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-h1;
+    }
 
     &__title{
         font-size: calc($h1-size*2);
     }
 
     &__text{
-        width: 50%;
+        width: 100%;
         margin-bottom: $space-text;
 
         &--last{
@@ -171,12 +177,75 @@ a{
         gap: $space-p;
     }
 
+    &__img{
+        width: 100%;
+        border-radius: calc($space-p/2);
+    }
+
 }
 
 .presentation{
-    width: 100%;
-    height: 100vh;
     background-color: $grey-color-dark;
+    padding: $space-h1 0;
+
+    color: $light-color;
+
+    text-align: center;
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-p;
+    }
+
+    &__text{
+        padding: 0 150px;
+    }
+}
+
+.project{
+    padding: $space-h1 0;
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-p;
+    }
+
+    &__text{
+        width: 60%;
+        margin-bottom: $space-text;
+
+        &--last{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.trailer{
+    width: 100%;
+    height: 100%;
+    padding: $space-h1 0;
+    background-color: $blue-color;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-h3;
+    }
+
+    &__video{
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; // Ratio 16:9
+        background-color: #707070;
+
+        margin-bottom: $space-h3;
+    }
 }
 
 // Application
