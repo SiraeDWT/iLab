@@ -4,9 +4,12 @@ require 'nav.php';
 ?>
 <main>
     <section class="intro">
-        <h1 class="intro__title title">iLabrador</h1>
+        <div class="wrapper">
+            <h1 class="intro__title title">iLabrador</h1>
         <p class="intro__text"></p>
         <img src="" alt="">
+        </div>
+        
     </section>
 
     <section class="presentation" id="presentation"></section>
