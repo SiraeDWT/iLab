@@ -17,6 +17,7 @@ body, html{
     font-weight: 400;
 
     font-size: $p-size;
+    background-color: $light-color;
 }
 
 a{
@@ -43,10 +44,39 @@ a{
 }
 
 .wrapper{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
+
+// Landing page
+.header{
+    background-color: $dark-color;
+}
+
+.menu{
+    padding: calc($space-p/2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 80px;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: $space-p;
+    }
+
+    &__el a{
+        padding: 10px;
+    }
+}
+
+
+// Application
 .app{
     width: 100%;
     height: 100vh;
@@ -103,31 +133,8 @@ a{
     opacity: 1;
 }
 
-.header{
-    background-color: $dark-color;
-}
 
-.menu{
-    padding: calc($space-p/2) 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__logo{
-        width: 80px;
-    }
-
-    &__list{
-        list-style: none;
-        display: flex;
-        gap: $space-p;
-    }
-
-    &__el a{
-        padding: 10px;
-    }
-}
-
+// Footer
 .footer{
     background-color: $dark-color;
     padding: 10px 0;
@@ -137,7 +144,6 @@ a{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: calc($space-p/2);
         align-items: center;
         padding: 10px 0;
     }
@@ -146,12 +152,19 @@ a{
         display: flex;
         list-style: none;
         padding: 0;
+
+        display: flex;
+        gap: calc($space-p/2);
     }
     
     &__el a{
         font-size: $p-size;
         padding: 10px;
         color: $beige-color;
+
+        &:first-child{
+            padding-left: 0;
+        }
 
         &:visited{
             color: $link-visited-color;
