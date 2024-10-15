@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="footer__content">
+    <div class="footer__content wrapper">
         <ul class="footer__list">
             <li class="footer__el">
                 <a href="https://dylan-vercalsteren.be/">Dylan Vercalsteren</a>
