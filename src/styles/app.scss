@@ -18,6 +18,7 @@ body, html{
 
     font-size: $p-size;
     background-color: $light-color;
+    color: $dark-color;
 }
 
 a{
@@ -43,6 +44,37 @@ a{
     font-weight: 700;
 }
 
+.btn{
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: calc($space-p/3);
+
+    color: $light-color;
+    background: $grey-color-dark;
+    border-radius: calc($space-p/2);
+    padding: calc($space-p/4) calc($space-p/2);
+
+    font-style: italic;
+    transition: ease-in-out;
+
+    &:visited, &:hover, &:active{
+        color: $light-color;
+    }
+
+    &:active{
+        transform: scale(105%);
+    }
+
+    & svg{
+        width: calc($p-size/1.5);
+        height: calc($p-size/1.5);
+        fill: $light-color;
+        vertical-align: middle;
+    }
+}
+
 .wrapper{
     width: 90%;
     margin: 0 auto;
@@ -51,7 +83,17 @@ a{
 
 // Landing page
 .header{
-    background-color: $dark-color;
+    background-color: $light-color;
+    // border-bottom: 2px solid $grey-color-dark;
+
+    position: fixed;
+    top: 0; left: 0; right: 0;
+
+    transition: transform .2s ease-out;
+
+    &--hide{
+        transform: translateY(-100%);
+    }
 }
 
 .menu{
@@ -72,9 +114,67 @@ a{
 
     &__el a{
         padding: 10px;
+        color: $grey-color-dark;
+    }
+
+    &__btn{
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: calc($space-p/3);
+        color: $light-color;
+        background: $grey-color-dark;
+        border-radius: calc($space-p/2);
+        padding: calc($space-p/4) calc($space-p/2);
+
+        font-style: italic;
+        transition: ease-in-out;
+
+        &:visited, &:hover, &:active{
+            color: $light-color;
+        }
+
+        &:active{
+            transform: scale(105%);
+        }
+    }
+
+    &__icon{
+        width: 10px;
+        fill: $light-color;
     }
 }
 
+.intro{
+    width: 100%;
+    height: 98vh;
+    background-color: $blue-color;
+
+    &__title{
+        padding: calc($space-h1*2) 0 0;
+        font-size: calc($h1-size*2);
+    }
+
+    &__text{
+        width: 50%;
+        margin-bottom: $space-h3;
+    }
+
+    &__list{
+        list-style: none;
+
+        display: flex;
+        gap: $space-p;
+    }
+
+}
+
+.presentation{
+    width: 100%;
+    height: 100vh;
+    background-color: $grey-color-dark;
+}
 
 // Application
 .app{
@@ -222,3 +322,5 @@ a{
 }
 
 @import 'components/responsive';
+@import 'components/retina';
+@import 'components/mixin';
