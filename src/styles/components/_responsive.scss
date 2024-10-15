@@ -1,7 +1,22 @@
 @media only screen and (min-width: $breakpoint-mobile){}
 
-@media only screen and (min-width: $breakpoint-tablet){}
+@media only screen and (min-width: $breakpoint-tablet){
+    .wrapper{
+        width: 80%;
+    }
+}
 
-@media only screen and (min-width: $breakpoint-desktop){}
+@media only screen and (min-width: $breakpoint-desktop){
+    .wrapper{
+        width: 70%;
+    }
+
+    .footer{
+        &__content{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
 
 @media only screen and (min-width: $breakpoint-desktop-large){}
