@@ -19,7 +19,6 @@ $luciole: 'Luciole', sans-serif; // 400 - 700 - Italic
 $verdana: "verdana-pro", sans-serif;
 
 
-$primary-color: #a333ff;
 $dark-color: #121212;
 $light-color: #fafafa;
 
@@ -28,10 +27,13 @@ $darkbrown-color: #4B2F00;
 $grey-color: #5F5351;
 $blue-color: #97DAFF;
 
+$grey-color-dark: mix($grey-color, #000000, 80%);
+$grey-color-light: mix($grey-color, #ffffff, 80%);
+
 $link-color: $beige-color;
 $link-visited-color: $beige-color;
-$link-hover-color: mix($grey-color, #000000, 80%);
-$link-active-color: mix($grey-color, #ffffff, 80%);
+$link-hover-color: $grey-color-dark;
+$link-active-color: $grey-color-light;
 
 
 $breakpoint-mobile: 640px;
