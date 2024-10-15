@@ -2,8 +2,8 @@
     <section class="intro">
         <div class="wrapper">
             <h1 class="intro__title title">iLabrador</h1>
-        <p class="intro__text"></p>
-        <img src="" alt="">
+            <p class="intro__text"></p>
+            <img src="" alt="">
         </div>
         
     </section>
