@@ -3,7 +3,7 @@
 $base: 20px;
 $multi: 1.414;
 
-$p-size: round($base * $multi);
+$p-size: $base;
 $h3-size: round($p-size * $multi);
 $h2-size: round($h3-size * $multi);
 $h1-size: round($h2-size * $multi);
@@ -19,4 +19,12 @@ $luciole: 'Luciole', sans-serif; // 400 - 700 - Italic
 $verdana: "verdana-pro", sans-serif;
 
 
-$primary: #a333ff;
+$primary-color: #a333ff;
+$dark-color: #121212;
+$light-color: #fafafa;
+
+
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1440px;
+$breakpoint-desktop-large: 1921px;
