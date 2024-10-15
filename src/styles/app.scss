@@ -21,11 +21,30 @@ body, html{
 
 a{
     font-weight: 500;
+    text-decoration: none;
+    color: $beige-color;
+
+    &:visited{
+        color: $link-visited-color;
+    }
+
+    &:hover{
+        color: $link-hover-color;
+    }
+
+    &:active{
+        color: $link-active-color;
+    }
 }
 
 .title{
     // font-family: $verdana;
     font-weight: 700;
+}
+
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
 }
 
 .app{
@@ -84,6 +103,27 @@ a{
     opacity: 1;
 }
 
+.header{
+    background-color: $dark-color;
+}
+
+.menu{
+    padding: calc($space-p/2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 80px;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: $space-p;
+    }
+}
+
 .footer{
     background-color: $dark-color;
     padding: 10px 0;
@@ -108,7 +148,18 @@ a{
         font-size: $p-size;
         padding: 10px;
         color: $beige-color;
-        text-decoration: none;
+
+        &:visited{
+            color: $link-visited-color;
+        }
+
+        &:hover{
+            color: $link-hover-color;
+        }
+
+        &:active{
+            color: $link-active-color;
+        }
     }
 
     &__dwt{
