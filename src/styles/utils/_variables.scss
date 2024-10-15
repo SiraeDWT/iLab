@@ -8,6 +8,7 @@ $h3-size: round($p-size * $multi);
 $h2-size: round($h3-size * $multi);
 $h1-size: round($h2-size * $multi);
 
+$space-text: $base;
 $space-p: $p-size * 2;
 $space-h3: $h3-size * 2;
 $space-h2: $h2-size * 2;
