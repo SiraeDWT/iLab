@@ -122,6 +122,10 @@ a{
         display: flex;
         gap: $space-p;
     }
+
+    &__el a{
+        padding: 10px;
+    }
 }
 
 .footer{
