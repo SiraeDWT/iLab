@@ -1,24 +1,13 @@
 <?php
-require 'header.php';
-require 'nav.php';
+require 'partials/header.php';
+require 'partials/nav.php';
 ?>
-<main>
-    <section class="intro">
-        <div class="wrapper">
-            <h1 class="intro__title title">iLabrador</h1>
-        <p class="intro__text"></p>
-        <img src="" alt="">
-        </div>
-        
-    </section>
 
-    <section class="presentation" id="presentation"></section>
-
-    <section class="projet" id="projet"></section>
-
-    <section class="equipe" id="equipe"></section>
-</main>
 <?php
-require 'footer.php';
-require 'close.php';
+require 'partials/landing.php';
+?>
+
+<?php
+require 'partials/footer.php';
+require 'partials/close.php';
 ?>

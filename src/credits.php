@@ -1,9 +1,9 @@
 <?php
-require 'header.php';
+require 'partials/header.php';
 ?>
 <main>
     
 </main>
 <?php
-require 'close.php';
+require 'partials/close.php';
 ?>
