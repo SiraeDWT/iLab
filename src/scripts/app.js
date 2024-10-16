@@ -10,6 +10,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
+// Sticky nav
 let oldScrollY = 0;
 const menu = document.querySelector('.header');
 
@@ -25,6 +26,23 @@ function scrollListener() {
 }
 
 
+// Button top
+window.addEventListener('scroll', function(){
+    const button = document.querySelector('.top');
+
+    if(button){
+        if (window.scrollY > 250) {
+            button.classList.remove('top--hide');
+            button.classList.add('top--show');
+        } else {
+            button.classList.remove('top--show');
+            button.classList.add('top--hide');
+        }
+    }
+});
+
+
+// Character's script
 let character = document.querySelector('.app__character');
 let message = document.querySelector('.app__message');
 let movementEnabled = true;

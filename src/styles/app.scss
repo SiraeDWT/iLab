@@ -292,6 +292,42 @@ a{
     }
 }
 
+.top{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: $beige-color;
+    width: 44px;
+    height: 44px;
+    border-radius: calc($space-p/2);
+
+    z-index: 20;
+
+    &--show{
+        display: block;
+    }
+
+    &--hide{
+        display: none;
+    }
+
+    &:hover{
+        background-color: $link-hover-color;
+
+        & svg{
+            fill: $beige-color;
+        }
+    }
+
+    & svg{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        fill: $grey-color-dark;
+    }
+}
+
 // Application
 .app{
     width: 100%;

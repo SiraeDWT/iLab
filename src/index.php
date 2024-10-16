@@ -5,6 +5,7 @@ require 'partials/nav.php';
 
 <?php
 require 'partials/landing.php';
+require 'partials/button-top.php';
 ?>
 
 <?php
