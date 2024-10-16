@@ -103,7 +103,8 @@ a{
     align-items: center;
 
     &__logo{
-        width: 50px;
+        width: 75px;
+        fill: $grey-color-dark;
     }
 
     &__list{
@@ -148,7 +149,7 @@ a{
 
 .intro{
     background-color: $blue-color;
-    padding: calc($space-h1*2) 0 $space-h1;
+    padding: $space-h1 0;
 
     &__content{
         display: flex;
@@ -159,6 +160,12 @@ a{
 
     &__title{
         font-size: calc($h1-size*2);
+
+        & span{
+            color: $blue-color;
+
+            text-shadow: 2px 2px 0 $grey-color-dark, -2px -2px 0 $grey-color-dark, 2px -2px 0 $grey-color-dark, -2px 2px 0 $grey-color-dark;
+        }
     }
 
     &__text{
@@ -190,21 +197,6 @@ a{
 
     color: $light-color;
 
-    text-align: center;
-
-    &__title{
-        font-size: $h1-size;
-        margin-bottom: $space-p;
-    }
-
-    &__text{
-        padding: 0 150px;
-    }
-}
-
-.project{
-    padding: $space-h1 0;
-
     &__title{
         font-size: $h1-size;
         margin-bottom: $space-p;
@@ -212,11 +204,45 @@ a{
 
     &__text{
         width: 60%;
+    }
+}
+
+.project{
+    padding: $space-h1 0;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-h1;
+
+        & > div:nth-child(1){
+            flex: 0 0 60%;
+        }
+    
+        & > div:nth-child(2){
+            flex: 0 0 40%;
+        }
+    }
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-p;
+    }
+
+    &__text{
+        width: 100%;
         margin-bottom: $space-text;
 
         &--last{
             margin-bottom: 0;
         }
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: calc($space-p/2);
+        transform: rotate(-2deg);
     }
 }
 
