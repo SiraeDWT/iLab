@@ -17,9 +17,14 @@
     </section>
 
     <section class="presentation" id="presentation">
-        <div class="wrapper">
-            <h2 class="presentation__title title">iLab, un projet étudiant</h2>
-            <p class="presentation__text">«&nbsp;iLab&nbsp;»&nbsp;est un projet scolaire réalisé en groupe à la Haute École Albert Jacquard. L’objectif est de développer une borne interactive qui sera présentée au public. C’est un atelier qui permet de prendre en main de nouvelles technologies et d’apprendre à utiliser les bonnes pratiques en termes d’accessibilité dans le Web.</p>
+        <div class="wrapper presentation__content">
+            <div>
+                <h2 class="presentation__title title">iLab, un projet étudiant</h2>
+                <p class="presentation__text">«&nbsp;iLab&nbsp;»&nbsp;est un projet scolaire réalisé en groupe à la Haute École Albert Jacquard. L’objectif est de développer une borne interactive qui sera présentée au public. C’est un atelier qui permet de prendre en main de nouvelles technologies et d’apprendre à utiliser les bonnes pratiques en termes d’accessibilité dans le Web.</p>
+            </div>
+            <div>
+                <img src="assets/images/logo-heaj.png" alt="" class="presentation__img">
+            </div>
         </div>
     </section>
 
