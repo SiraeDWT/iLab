@@ -1,0 +1,43 @@
+.intro{
+    background-color: $blue-color;
+    padding: $space-h1 0;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-h1;
+    }
+
+    &__title{
+        font-size: calc($h1-size*2);
+
+        & span{
+            color: $blue-color;
+
+            text-shadow: 2px 2px 0 $dark-color, -2px -2px 0 $dark-color, 2px -2px 0 $dark-color, -2px 2px 0 $dark-color;
+        }
+    }
+
+    &__text{
+        width: 100%;
+        margin-bottom: $space-text;
+
+        &--last{
+            margin-bottom: $space-h3;
+        }
+    }
+
+    &__list{
+        list-style: none;
+
+        display: flex;
+        gap: $space-p;
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: calc($space-p/2);
+    }
+
+}

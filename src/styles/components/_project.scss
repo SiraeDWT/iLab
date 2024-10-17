@@ -1,0 +1,37 @@
+.project{
+    padding: $space-h1 0;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-h1;
+
+        & > div:nth-child(1){
+            flex: 0 0 60%;
+        }
+    
+        & > div:nth-child(2){
+            flex: 0 0 40%;
+        }
+    }
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-p;
+    }
+
+    &__text{
+        width: 100%;
+        margin-bottom: $space-text;
+
+        &--last{
+            margin-bottom: 0;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: calc($space-p/2);
+    }
+}

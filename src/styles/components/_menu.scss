@@ -1,0 +1,50 @@
+.menu{
+    padding: calc($space-p/2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 75px;
+        fill: $grey-color-dark;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: $space-p;
+    }
+
+    &__el a{
+        padding: 10px;
+        color: $grey-color-dark;
+    }
+
+    &__btn{
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: calc($space-p/3);
+        color: $light-color;
+        background: $grey-color-dark;
+        border-radius: calc($space-p/2);
+        padding: calc($space-p/4) calc($space-p/2);
+
+        font-style: italic;
+        transition: ease-in-out;
+
+        &:visited, &:hover, &:active{
+            color: $light-color;
+        }
+
+        &:active{
+            transform: scale(105%);
+        }
+    }
+
+    &__icon{
+        width: 10px;
+        fill: $light-color;
+    }
+}
