@@ -22,11 +22,35 @@
             display: none;
         }  
     }
+
+    .intro{
+        &__list{
+            flex-direction: row;
+            gap: $space-p;
+        }
+
+        &__text{
+            &--last{
+                margin-bottom: $space-h3;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $breakpoint-desktop){
     .wrapper{
         width: 75%;
+    }
+
+    .intro{
+        &__content{
+            gap: $space-h1;
+            flex-direction: row;
+        }
+
+        &__title{
+            font-size: calc($h1-size*2);
+        }
     }
 
     .footer{
