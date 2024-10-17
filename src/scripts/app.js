@@ -1,7 +1,5 @@
 "use strict";
 
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
