@@ -2,6 +2,12 @@
     background-color: $blue-color;
     padding: $space-h1 0 $space-h3;
 
+    background-image: url(../assets/images/nonos.png);
+
+    background-position: center;
+    // background-repeat: no-repeat;
+    background-size: contain;
+
     &__content{
         display: flex;
         justify-content: space-between;
