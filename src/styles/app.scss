@@ -59,6 +59,34 @@ a{
     font-style: italic;
     transition: ease-in-out;
 
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+
+    & *{
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: -100%; left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+        background: $dark-color;
+        transition: bottom 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+        
+        z-index: 0;
+    }
+
+    &:hover:after{
+        bottom: 0;
+        color: $light-color;
+    }
+
     &:visited, &:hover, &:active{
         color: $light-color;
     }
@@ -218,7 +246,12 @@ a{
     }
 
     &__text{
-        width: 100%; // 60%
+        width: 100%;
+        margin-bottom: $space-text;
+
+        &--last{
+            margin-bottom: 0;
+        }
     }
 
     &__img{
