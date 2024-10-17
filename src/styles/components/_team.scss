@@ -3,4 +3,52 @@
     padding: $space-h1 0;
 
     color: $light-color;
+
+    &__title{
+        font-size: $h1-size;
+        margin-bottom: $space-h3;
+
+        text-align: center;
+    }
+
+    &__wrapper{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__el{
+        display: flex;
+        align-items: center;
+        gap: $space-h2;
+
+        margin-bottom: $space-h2;
+
+        border: 5px solid $light-color;
+        border-radius: calc($space-p/2);
+        padding: $space-p;
+    }
+
+    &__name{
+        font-size: $h2-size;
+    }
+
+    &__tag{
+        font-size: $p-mini-size;
+        background-color: $dark-color;
+        padding: 5px;
+    }
+
+    &__text{
+        margin-top: $space-p;
+    }
+
+    &__img{
+        width: 250px;
+        height: 250px;
+        background-color: $grey-color-dark;
+    }
 }

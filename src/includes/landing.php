@@ -46,6 +46,62 @@
     <section class="team" id="team">
         <div class="wrapper">
             <h2 class="team__title title">L’équipe du projet</h2>
+            <ul class="team__list team__wrapper">
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Dylan</h3>
+                        <small class="team__tag">Développeur</small>
+                        <p class=" team__text">Création de la landing page, de l'application et de la borne, mise en place du workflow et de ses différents composants.</p>
+                    </div>
+                </li>
+
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Noa</h3>
+                        <small class="team__tag">Designer</small>
+                        <p class=" team__text">Création d'assets et de la borne, illustration et rédaction d'articles Medium.</p>
+                    </div>
+                </li>
+
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Thibault</h3>
+                        <small class="team__tag">Développeur</small>
+                        <p class=" team__text">Création de l'application et de la borne, recherches technologiques.</p>
+                    </div>
+                </li>
+
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Éléonore</h3>
+                        <small class="team__tag">Designer</small>
+                        <p class=" team__text">Création d'assets et de la borne, illustration.</p>
+                    </div>
+                </li>
+
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Xavier-Philippe</h3>
+                        <small class="team__tag">Vidéaste</small>
+                        <p class=" team__text">Création de la borne, recherche d'idées pour le UI Kit, photographe et monteur vidéo du trailer et du making-of.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
