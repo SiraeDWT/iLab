@@ -115,3 +115,37 @@ document.addEventListener('keyup', function(event){
         movementEnabled = true;
     };
 });
+
+
+// Name's display for footer
+function updateLastNameVisibility() {
+    let linkElements = document.querySelectorAll('.footer__el a');
+
+    linkElements.forEach(linkElement => {
+        if (!linkElement.hasAttribute('data-original-text')) { 
+            linkElement.setAttribute('data-original-text', linkElement.textContent);
+        }
+
+        let originalText = linkElement.getAttribute('data-original-text');
+        let originalLastName = originalText.split(' ')[1];
+
+        let linkText = linkElement.textContent.split(' ');
+
+        if (window.matchMedia('(min-width: 640px) and (max-width: 1439px)').matches) {
+            linkText[1] = '';
+        } else {
+            
+            linkText[1] = originalLastName;
+        }
+
+        linkElement.textContent = linkText.join(' ');
+    });
+}
+
+function checkScreenWidth() {
+    updateLastNameVisibility();
+}
+
+window.addEventListener('resize', checkScreenWidth);
+
+checkScreenWidth();

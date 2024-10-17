@@ -8,6 +8,24 @@
             width: 100%;
         }
     }
+
+    .footer{
+        &__content{
+            gap: $space-text;
+        }
+        
+        &__list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+    
+            display: flex;
+            gap: calc($space-p/2);
+        }
+    }
 }
 
 @media only screen and (min-width: $breakpoint-tablet){
