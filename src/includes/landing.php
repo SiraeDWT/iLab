@@ -98,7 +98,7 @@
                     <div>
                         <h3 class="team__name">Xavier-Philippe</h3>
                         <small class="team__tag">Vidéaste</small>
-                        <p class=" team__text">Création de la borne, recherche d'idées pour le UI Kit, photographe et monteur vidéo du trailer et du making-of.</p>
+                        <p class=" team__text">Création de la borne, recherches UI Kit, photographe et monteur vidéo du trailer et du making-of.</p>
                     </div>
                 </li>
             </ul>

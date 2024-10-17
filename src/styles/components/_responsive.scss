@@ -1,4 +1,8 @@
-@media only screen and (min-width: $breakpoint-mobile){}
+@media only screen and (min-width: $breakpoint-mobile){
+    .wrapper{
+        width: 90%;
+    }
+}
 
 @media only screen and (min-width: $breakpoint-tablet){
     .wrapper{
@@ -24,6 +28,8 @@
     }
 
     .intro{
+        padding: $space-h1 0 $space-h3;
+
         &__list{
             flex-direction: row;
             gap: $space-p;
@@ -35,6 +41,22 @@
             }
         }
     }
+
+    .presentation{
+        padding: $space-h2 0;
+    }
+
+    .project{
+        padding: $space-h2 0;
+    }
+
+    .team{
+        padding: $space-h2 0;
+    }
+
+    .trailer{
+        padding: $space-h2 0;
+    }
 }
 
 @media only screen and (min-width: $breakpoint-desktop){
@@ -43,6 +65,8 @@
     }
 
     .intro{
+        padding: $space-h1 0;
+
         &__content{
             gap: $space-h1;
             flex-direction: row;
@@ -50,6 +74,80 @@
 
         &__title{
             font-size: calc($h1-size*2);
+        }
+    }
+
+    .presentation{
+        padding: $space-h1 0;
+
+        &__content{
+            flex-direction: row;
+
+            & > div:nth-child(1){
+                flex: 0 0 60%;
+            }
+        
+            & > div:nth-child(2){
+                flex: 0 0 40%;
+                display: flex;
+            }
+        }
+
+        &__title{
+            font-size: $h1-size;
+        }
+    }
+
+    .project{
+        padding: $space-h1 0;
+
+        &__content{
+            gap: $space-h1;
+            flex-direction: row;
+
+            & > div:nth-child(1){
+                flex: 0 0 60%;
+            }
+        
+            & > div:nth-child(2){
+                flex: 0 0 40%;
+            }
+        }
+
+        &__title{
+            font-size: $h1-size;
+        }
+    }
+
+    .team{
+        padding: $space-h1 0;
+
+        &__title{
+            font-size: $h1-size;
+        }
+
+        &__wrapper{
+            width: 70%;
+        }
+
+        &__el{
+            margin-bottom: $space-h3;
+            flex-direction: row;
+            padding: $space-p;
+            gap: $space-h2;
+        }
+
+        &__text{
+            margin-top: $space-p;
+        }
+    }
+
+    .trailer{
+        padding: $space-h1 0;
+        
+        &__title{
+            font-size: $h1-size;
+            margin-bottom: $space-h3;
         }
     }
 

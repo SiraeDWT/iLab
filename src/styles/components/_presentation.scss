@@ -1,6 +1,6 @@
 .presentation{
     background-color: $grey-color-dark;
-    padding: $space-h1 0;
+    padding: $space-h3 0;
 
     color: $light-color;
 
@@ -9,18 +9,15 @@
         justify-content: space-between;
         align-items: center;
         gap: $space-h1;
-
-        & > div:nth-child(1){
-            flex: 0 0 60%;
-        }
+        flex-direction: column;
     
         & > div:nth-child(2){
-            flex: 0 0 40%;
+            display: none;
         }
     }
 
     &__title{
-        font-size: $h1-size;
+        font-size: $h2-size;
         margin-bottom: $space-p;
     }
 

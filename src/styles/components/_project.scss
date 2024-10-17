@@ -1,23 +1,16 @@
 .project{
-    padding: $space-h1 0;
+    padding: $space-h3 0;
 
     &__content{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: $space-h1;
-
-        & > div:nth-child(1){
-            flex: 0 0 60%;
-        }
-    
-        & > div:nth-child(2){
-            flex: 0 0 40%;
-        }
+        gap: $space-p;
+        flex-direction: column;
     }
 
     &__title{
-        font-size: $h1-size;
+        font-size: $h2-size;
         margin-bottom: $space-p;
     }
 

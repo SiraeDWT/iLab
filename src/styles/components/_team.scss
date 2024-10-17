@@ -1,18 +1,18 @@
 .team{
     background-color: $grey-color-dark;
-    padding: $space-h1 0;
+    padding: $space-h3 0;
 
     color: $light-color;
 
     &__title{
-        font-size: $h1-size;
+        font-size: $h2-size;
         margin-bottom: $space-h3;
 
         text-align: center;
     }
 
     &__wrapper{
-        width: 70%;
+        width: 95%;
         margin: 0 auto;
     }
 
@@ -23,13 +23,14 @@
     &__el{
         display: flex;
         align-items: center;
-        gap: $space-h2;
+        gap: $space-p;
+        flex-direction: column;
 
-        margin-bottom: $space-h2;
+        margin-bottom: $space-h3;
 
         border: 5px solid $light-color;
         border-radius: calc($space-p/2);
-        padding: $space-p;
+        padding: $space-text;
     }
 
     &__name{
@@ -43,7 +44,7 @@
     }
 
     &__text{
-        margin-top: $space-p;
+        margin-top: $space-text;
     }
 
     &__img{
