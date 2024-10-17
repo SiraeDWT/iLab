@@ -31,15 +31,21 @@
 
     <section class="project" id="project">
         <div class="wrapper project__content">
-            <div class="test1">
+            <div>
                 <h2 class="project__title title">iLabrador, une application</h2>
                 <p class="project__text">iLabrador va vous faire vivre une journée type d’une personne ayant des déficiences visuelles au travers d’un voyage avec le chien-guide du même nom.</p>
                 <p class="project__text">L’objectif de cette application est de sensibiliser les gens aux différentes difficultés que peuvent traverser les malvoyants au quotidien via différentes situations qui peuvent paraître banales pour monsieur ou madame tout le monde.</p>
                 <p class="project__text project__text--last">Grâce à iLabrador, vous allez pouvoir naviguer dans plusieurs environnements de la vie quotidienne. Découvrir les aménagements mis en place pour aider les personnes malvoyantes, mais également tout ce qui n'est pas adapté pour elles.</p>
             </div>
-            <div class="test2">
+            <div>
                 <img src="assets/images/app.png" alt="" class="project__img">
             </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="wrapper">
+            <h2 class="team__title title">L’équipe du projet</h2>
         </div>
     </section>
 
