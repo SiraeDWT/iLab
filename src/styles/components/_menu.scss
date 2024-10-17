@@ -1,7 +1,17 @@
 .menu{
-    padding: calc($space-p/2) 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $light-color;
+    z-index: 20;
+    transform: translateY(-100%);
+    transition: transform .3s cubic-bezier(0.7, 0, 0.84, 0);
+
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
 
     &__logo{
@@ -12,6 +22,8 @@
     &__list{
         list-style: none;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: $space-p;
     }
 
@@ -43,8 +55,29 @@
         }
     }
 
-    &__icon{
+    &__play{
         width: 10px;
         fill: $light-color;
+    }
+
+    &--toggle{
+        cursor: pointer;
+        position: absolute;
+        top: $space-p;
+        right: $space-p;
+        z-index: 30;
+
+        background: none;
+        border: none;
+    }
+
+    &__icon{
+        width: $h3-size;
+        height: $h3-size;
+        fill: $grey-color-dark;
+    }
+
+    &--open &{
+        transform: translateX(0);
     }
 }

@@ -12,15 +12,51 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let oldScrollY = 0;
 const menu = document.querySelector('.header');
 
-window.addEventListener('scroll', scrollListener);
+const mediaQuery = window.matchMedia('(min-width: 1024px)');
+
+if (mediaQuery.matches) {
+    window.addEventListener('scroll', scrollListener);
+}
 
 function scrollListener() {
-    if(oldScrollY > window.scrollY){
+    if (oldScrollY > window.scrollY) {
         menu.classList.remove('header--hide');
-    } else{
+    } else {
         menu.classList.add('header--hide');
     }
     oldScrollY = window.scrollY;
+}
+
+mediaQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+        window.addEventListener('scroll', scrollListener);
+    } else {
+        window.removeEventListener('scroll', scrollListener);
+    }
+});
+
+
+// Burger menu
+const menuToggle = document.querySelector('.menu--toggle');
+const menuIcon = document.getElementById('menu-icon');
+
+const svgMenu = `<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>`;
+const svgClose = `<path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/>`;
+
+if(menuToggle){
+    menuToggle.addEventListener('click', menuOpen);
+}
+
+function menuOpen() {
+    document.body.classList.toggle('menu--open');
+    
+    let menuOpen = document.body.classList.contains('menu--open');
+
+    if (menuOpen) {
+        menuIcon.innerHTML = svgClose;
+    } else {
+        menuIcon.innerHTML = svgMenu;
+    }
 }
 
 
