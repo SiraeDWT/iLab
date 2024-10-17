@@ -205,4 +205,8 @@
     }
 }
 
-@media only screen and (min-width: $breakpoint-desktop-large){}
+@media only screen and (min-width: $breakpoint-desktop-large){
+    .wrapper{
+        width: 60%;
+    }
+}
