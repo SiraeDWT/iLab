@@ -1,2 +1,6 @@
 @media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {}
+(min-resolution: 192dpi) {
+    .intro{
+        background-image: url(../assets/images/nonos@2x.png);
+    }
+}
