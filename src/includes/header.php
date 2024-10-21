@@ -14,7 +14,7 @@ include 'functions.php';
     <meta property ="og:description" content="<?php echo addDescription(); ?>">
     <meta property ="og:type" content="website">
     <meta property ="og:url" content="https://dylan-vercalsteren.be/projets/ilab/">
-    <meta property ="og:image" content="https://dylan-vercalsteren.be/projets/ilab/assets/images/logo.png">
+    <meta property ="og:image" content="https://dylan-vercalsteren.be/projets/ilab/assets/images/toutou.webp">
     <meta property ="og:image:width" content="386">
     <meta property ="og:image:height" content="386">
 
