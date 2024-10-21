@@ -1,4 +1,7 @@
 <main>
+    <div class="app__warning">
+        <h2>Ce site est uniquement accessible via la borne conçue pour le projet ou via ordinateur.</h2>
+    </div>
     <section class="app">
         <div class="app__character"></div>
         <div class="app__ground"></div>

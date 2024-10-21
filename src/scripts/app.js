@@ -149,3 +149,18 @@ function checkScreenWidth() {
 window.addEventListener('resize', checkScreenWidth);
 
 checkScreenWidth();
+
+
+// App
+function isMobileOrTablet(){
+    return /Mobi|Android|iPhone|iPod|Tablet/i.test(navigator.userAgent);
+}
+
+window.onload = function(){
+    if (isMobileOrTablet()){
+        document.body.style.display = 'none';
+        document.querySelector('mobile-warning').style.display = "block";
+    } else{
+        document.body.style.display = 'block';
+    }
+}
