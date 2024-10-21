@@ -27,7 +27,7 @@
             </a>
             <ul class="footer__credits">
                 <li class="footer__el">
-                    <a href="credits.html" class="footer__el">Crédits</a>
+                    <a href="credits.php" class="footer__el">Crédits</a>
                 </li>
                 <li class="footer__el">
                     <small class="footer__el">&copy; 2024</small>
