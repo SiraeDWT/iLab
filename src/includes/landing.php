@@ -10,7 +10,7 @@
                     <li class="intro__el"><a href="app.php" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="menu__icon"><path d="M23.948.042c-.413-.028-.817-.042-1.214-.042-8.6 0-13.497 6.557-15.278 11.833l4.727 4.727c5.428-1.944 11.817-6.66 11.817-15.168 0-.44-.017-.89-.052-1.35zm-11.277 14.178l-2.883-2.883c1.221-2.859 4.691-8.945 12.199-9.32-.251 5.775-4.041 9.932-9.316 12.203zm5.471 1.538c-.547.373-1.09.71-1.628 1.011-.187.891-.662 1.842-1.351 2.652-.002-.576-.162-1.156-.443-1.738-.495.225-.966.418-1.414.588.66 1.709-.012 2.971-.915 4.154 1.296-.098 2.656-.732 3.728-1.805 1.155-1.155 1.967-2.823 2.023-4.862zm-11.82-6.469c-.579-.28-1.158-.438-1.732-.441.803-.681 1.744-1.153 2.626-1.345.314-.552.667-1.097 1.039-1.633-2.039.055-3.708.867-4.864 2.023-1.071 1.071-1.706 2.433-1.804 3.728 1.184-.904 2.446-1.576 4.155-.914.173-.471.366-.944.58-1.418zm7.738.663c-.391-.391-.391-1.023 0-1.414s1.023-.391 1.414 0c.391.392.391 1.024 0 1.415s-1.024.39-1.414-.001zm4.949-4.951c-.78-.78-2.047-.78-2.828 0-.781.781-.781 2.049 0 2.829.781.781 2.048.781 2.829 0 .78-.78.78-2.047-.001-2.829zm-1.908 1.911c-.273-.273-.273-.718 0-.99.271-.273.717-.273.99 0 .272.272.271.717 0 .99-.274.272-.718.272-.99 0zm-8.234 8.837l1.013 1.012c-.942.954-1.907 2.083-2.287 3.637l-1.39-.34c.467-1.912 1.607-3.24 2.664-4.309zm-1.634-1.633l1.01 1.01c-1.119 1.103-2.413 2.203-4.307 2.666l-.34-1.39c1.553-.381 2.69-1.35 3.637-2.286zm2.746 6.446c.206 2.029-.946 3.265-2.48 3.421-.902.092-1.701-.205-2.356-.88-1.575.556-3.074-.047-3.864-1.172-.622-.883-.76-2.002-.382-3.074-.676-.656-.973-1.448-.88-2.356.154-1.521 1.361-2.694 3.484-2.475l.21 1.208c-.716.067-1.379.104-1.809.533-.722.723-.504 2.229.851 2.629-.899.904-.813 2.202-.137 2.914.707.747 2.057.863 2.987-.063.416 1.41 1.942 1.537 2.629.851.424-.424.465-1.075.531-1.782l1.216.246z"/></svg><span>Lancer l’aventure</span></a></li>
                 </ul> 
             </div>
-            <img src="assets/images/toutou-sticker.png" alt="iLabrador se tenant debout en nous regardant avec la langue qui pend" class="intro__img"> 
+            <img src="assets/images/toutou.webp" srcset="assets/images/toutou@2x.webp 2x" alt="iLabrador se tenant debout en nous regardant avec la langue qui pend" class="intro__img"> 
         </div>   
     </section>
 
@@ -52,29 +52,7 @@
                     <div>
                         <h3 class="team__name">Dylan</h3>
                         <small class="team__tag">Développeur</small>
-                        <p class=" team__text">Création de la landing page, de l'application et de la borne, mise en place du workflow et de ses différents composants.</p>
-                    </div>
-                </li>
-
-                <li class="team__el team__el--even">
-                    <div>
-                        <img src="assets/images/toutou.png" alt="" class="team__img">
-                    </div>
-                    <div>
-                        <h3 class="team__name">Noa</h3>
-                        <small class="team__tag">Designer</small>
-                        <p class=" team__text">Création d'assets et de la borne, illustration et rédaction d'articles Medium.</p>
-                    </div>
-                </li>
-
-                <li class="team__el">
-                    <div>
-                        <img src="assets/images/toutou.png" alt="" class="team__img">
-                    </div>
-                    <div>
-                        <h3 class="team__name">Thibault</h3>
-                        <small class="team__tag">Développeur</small>
-                        <p class=" team__text">Création de l'application et de la borne, recherches technologiques.</p>
+                        <p class=" team__text">Dylan, la prémolaire du développement qui se charge de la création de la landing page et de l’application. Il gère également le workflow avec différents composants.</p>
                     </div>
                 </li>
 
@@ -85,7 +63,7 @@
                     <div>
                         <h3 class="team__name">Éléonore</h3>
                         <small class="team__tag">Designer</small>
-                        <p class=" team__text">Création d'assets et de la borne, illustration.</p>
+                        <p class=" team__text">Éléonore, la dent de lait designeuse est chargée de la création d’assets, du design et de la conception de la borne mais également des croquis d’illustrations.</p>
                     </div>
                 </li>
 
@@ -94,9 +72,31 @@
                         <img src="assets/images/toutou.png" alt="" class="team__img">
                     </div>
                     <div>
-                        <h3 class="team__name">Xavier-Philippe</h3>
+                        <h3 class="team__name">Noa</h3>
+                        <small class="team__tag">Designer</small>
+                        <p class=" team__text">Noa, l’incisive designeuse a pour mission de créer des assets, du design et élaboration de la borne. Elle rédige également le Medium hebdomadaire.</p>
+                    </div>
+                </li>
+
+                <li class="team__el team__el--even">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Thibault</h3>
+                        <small class="team__tag">Développeur</small>
+                        <p class=" team__text">Thibault, la molaire du développement s’occupe principalement de l’application, de la borne et aussi des recherches de technologies.</p>
+                    </div>
+                </li>
+
+                <li class="team__el">
+                    <div>
+                        <img src="assets/images/toutou.png" alt="" class="team__img">
+                    </div>
+                    <div>
+                        <h3 class="team__name">Xavier</h3>
                         <small class="team__tag">Vidéaste</small>
-                        <p class=" team__text">Création de la borne, recherches UI Kit, photographe et monteur vidéo du trailer et du making-of.</p>
+                        <p class=" team__text">Xavier-Phillipe, la canine vidéaste est responsable de la création de la borne et de la recherche de l’UI kit. Il s’occupe aussi des prises de photos et vidéos, ainsi que du montage du trailer et du making-of.</p>
                     </div>
                 </li>
             </ul>
