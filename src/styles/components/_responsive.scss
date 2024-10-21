@@ -181,6 +181,10 @@
             flex-direction: row;
             padding: $space-p;
             gap: $space-h2;
+
+            &--even{
+                flex-direction: row-reverse;
+            }
         }
 
         &__text{
