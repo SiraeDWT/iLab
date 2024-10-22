@@ -36,7 +36,7 @@
                 <p class="project__text project__text--last">Grâce à iLabrador, vous allez pouvoir vous aventurer dans plusieurs passages de la vie de tous les jour. Découvrir les aménagements mis en place pour aider les personnes ayant des difficultés visuelles mais également tout ce qui n'est pas adapté pour elles.</p>
             </div>
             <div>
-                <img src="assets/images/video.webp" srcset="assets/images/video@2x.webp 2x" alt="" class="project__img">
+                <img src="assets/images/video.webp" srcset="assets/images/video@2x.webp 2x" alt="GIF d'une démonstration de l'application" class="project__img">
             </div>
         </div>
     </section>
@@ -47,7 +47,7 @@
             <ul class="team__list team__wrapper">
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/labrador.webp" srcset="assets/images/labrador@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/labrador.webp" srcset="assets/images/labrador@2x.webp 2x" alt="Dessin d'un labrador noir" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Dylan</h3>
@@ -58,7 +58,7 @@
 
                 <li class="team__el team__el--even">
                     <div>
-                        <img src="assets/images/rottweiler.webp" srcset="assets/images/rottweiler@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/rottweiler.webp" srcset="assets/images/rottweiler@2x.webp 2x" alt="Dessin d'un rottweiler" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Éléonore</h3>
@@ -69,7 +69,7 @@
 
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/corgi.webp" srcset="assets/images/corgi@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/corgi.webp" srcset="assets/images/corgi@2x.webp 2x" alt="Dessin d'un corgi" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Noa</h3>
@@ -80,7 +80,7 @@
 
                 <li class="team__el team__el--even">
                     <div>
-                        <img src="assets/images/berger-australien.webp" srcset="assets/images/berger-australien@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/berger-australien.webp" srcset="assets/images/berger-australien@2x.webp 2x" alt="Dessin d'un berger australien" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Thibault</h3>
@@ -91,7 +91,7 @@
 
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/berger-allemand.webp" srcset="assets/images/berger-allemand@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/berger-allemand.webp" srcset="assets/images/berger-allemand@2x.webp 2x" alt="Dessin d'un berger allemand" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Xavier</h3>
