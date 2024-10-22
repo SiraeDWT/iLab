@@ -8,6 +8,11 @@
 
     &__btn{
         display: inline-flex;
+        border: 2px solid $light-color;
+
+        &:hover{
+            border: 2px solid $dark-color;
+        }
     }
 
     &__icon{
