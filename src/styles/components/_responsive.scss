@@ -179,8 +179,10 @@
         &__el{
             margin-bottom: $space-h3;
             flex-direction: row;
-            padding: $space-p;
+            padding: calc($space-p/2);
             gap: $space-h2;
+
+            border-bottom: 2px solid $light-color;
 
             &--even{
                 flex-direction: row-reverse;

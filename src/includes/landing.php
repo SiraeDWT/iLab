@@ -36,7 +36,7 @@
                 <p class="project__text project__text--last">Grâce à iLabrador, vous allez pouvoir vous aventurer dans plusieurs passages de la vie de tous les jour. Découvrir les aménagements mis en place pour aider les personnes ayant des difficultés visuelles mais également tout ce qui n'est pas adapté pour elles.</p>
             </div>
             <div>
-                <img src="assets/images/app.png" alt="" class="project__img">
+                <img src="assets/images/video.webp" srcset="assets/images/video@2x.webp 2x" alt="" class="project__img">
             </div>
         </div>
     </section>

@@ -26,5 +26,6 @@
     &__img{
         width: 100%;
         border-radius: calc($space-p/2);
+        border: 2px solid $dark-color;
     }
 }
