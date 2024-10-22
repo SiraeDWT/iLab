@@ -30,6 +30,10 @@
     &__el a{
         padding: 10px;
         color: $grey-color-dark;
+
+        &:hover{
+            color: $dark-color;
+        }
     }
 
     &__btn{
