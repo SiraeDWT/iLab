@@ -115,7 +115,175 @@ if(landing){
 
     mm.add("(max-width: 1439px)", () => {
 
+        gsap.from('.intro__title', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
 
+        gsap.from('.intro__text', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.intro__el', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.intro__img', {
+            x: '15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation__title', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation__text', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation svg', {
+            x: '15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__title', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__text', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__img', {
+            x: '15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.team__title', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.team',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.team__el', {
+            x: (i) => i % 2 === 0 ? '-15%' : '15%',
+            duration: 0.7,
+            opacity: 0,
+            stagger: 0.5,
+            scrollTrigger: {
+                trigger: '.team',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__title', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__video', {
+            width: 0,
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__btn', {
+            x: '-15%',
+            duration: 0.7,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
 
     });
 
@@ -123,7 +291,7 @@ if(landing){
 
         gsap.from('.intro__title', {
             x: '-25%',
-            duration: 1.4,
+            duration: 0.9,
             opacity: 0,
             scrollTrigger: {
                 trigger: '.intro',
@@ -134,7 +302,7 @@ if(landing){
 
         gsap.from('.intro__text', {
             x: '-25%',
-            duration: 1.4,
+            duration: 0.9,
             opacity: 0,
             stagger: 0.2,
             scrollTrigger: {
@@ -146,7 +314,7 @@ if(landing){
 
         gsap.from('.intro__el', {
             x: '-25%',
-            duration: 1.4,
+            duration: 0.9,
             opacity: 0,
             stagger: 0.2,
             scrollTrigger: {
@@ -158,11 +326,134 @@ if(landing){
 
         gsap.from('.intro__img', {
             x: '25%',
-            duration: 1.4,
+            duration: 0.9,
             opacity: 0,
-            stagger: 0.1,
             scrollTrigger: {
                 trigger: '.intro',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation__title', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation__text', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.presentation svg', {
+            x: '25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.presentation',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__title', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__text', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.project__img', {
+            x: '25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.project',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.team__title', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.team',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.team__el', {
+            x: (i) => i % 2 === 0 ? '-25%' : '25%',
+            duration: 0.9,
+            opacity: 0,
+            stagger: 0.5,
+            scrollTrigger: {
+                trigger: '.team',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__title', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__video', {
+            width: 0,
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
+                start: 'top 40%',
+                end: 'bottom 30%',
+            }
+        });
+
+        gsap.from('.trailer__btn', {
+            x: '-25%',
+            duration: 0.9,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.trailer',
                 start: 'top 40%',
                 end: 'bottom 30%',
             }
