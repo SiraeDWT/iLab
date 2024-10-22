@@ -8,9 +8,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
-const landing = document.querySelector('landing');
-const application = document.querySelector('application');
-const credits = document.querySelector('credits');
+const landing = document.querySelector('.landing');
+const application = document.querySelector('.application');
+const credits = document.querySelector('.credits');
 
 if(landing){
     // Sticky nav
@@ -112,6 +112,12 @@ if(landing){
 
     // GSAP Landing
     let mm = gsap.matchMedia();
+
+    mm.add("(max-width: 1439px)", () => {
+
+
+
+    });
 
     mm.add("(min-width: 1440px)", () => {
 
