@@ -22,7 +22,7 @@ include 'functions.php';
     <meta name="keywords" content="<?php echo addTags(); ?>">
     <meta name="author" content="<?php echo addGroup(); ?>">
     <meta name="copyright" content="<?php echo addGroup(); ?>">
-    <meta name="robots" content="index">
+    <?php echo addRobotsMetadata(); ?>
 
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/lri1xdp.css">

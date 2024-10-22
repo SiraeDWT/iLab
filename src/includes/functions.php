@@ -57,4 +57,12 @@ function addClass(){
         return "";
     }
 }
+
+function addRobotsMetadata(){
+    $file = getPage();
+
+    if($file == 'index.php'){
+        return '<meta name="robots" content="index">';
+    }   
+}
 ?>
