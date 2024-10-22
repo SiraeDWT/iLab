@@ -52,7 +52,7 @@
                     <div>
                         <h3 class="team__name">Dylan</h3>
                         <small class="team__tag">Développeur</small>
-                        <p class=" team__text">Dylan, la prémolaire du développement qui se charge de la création de la landing page et de l’application. Il gère également le workflow avec différents composants.</p>
+                        <p class=" team__text">Dylan, le labrador du développement qui se charge de la création de la landing page et de l’application. Il gère également le workflow avec ses différents composants.</p>
                     </div>
                 </li>
 
@@ -63,7 +63,7 @@
                     <div>
                         <h3 class="team__name">Éléonore</h3>
                         <small class="team__tag">Designer</small>
-                        <p class=" team__text">Éléonore, la dent de lait designeuse est chargée de la création d’assets, du design et de la conception de la borne mais également des croquis d’illustrations.</p>
+                        <p class=" team__text">Éléonore, la rottweiler designeuse est chargée de la création d’assets, du design et de la conception de la borne mais également des croquis d’illustrations.</p>
                     </div>
                 </li>
 
@@ -74,7 +74,7 @@
                     <div>
                         <h3 class="team__name">Noa</h3>
                         <small class="team__tag">Designer</small>
-                        <p class=" team__text">Noa, l’incisive designeuse a pour mission de créer des assets, du design et élaboration de la borne. Elle rédige également le Medium hebdomadaire.</p>
+                        <p class=" team__text">Noa, la corgi designeuse a pour mission de créer des assets, du design et élaboration de la borne. Elle rédige également le Medium hebdomadaire.</p>
                     </div>
                 </li>
 
@@ -85,7 +85,7 @@
                     <div>
                         <h3 class="team__name">Thibault</h3>
                         <small class="team__tag">Développeur</small>
-                        <p class=" team__text">Thibault, la molaire du développement s’occupe principalement de l’application, de la borne et aussi des recherches de technologies.</p>
+                        <p class=" team__text">Thibault, le berger australien du développement s’occupe principalement de l’application, de la borne et aussi des recherches de technologies.</p>
                     </div>
                 </li>
 
@@ -96,7 +96,7 @@
                     <div>
                         <h3 class="team__name">Xavier</h3>
                         <small class="team__tag">Vidéaste</small>
-                        <p class=" team__text">Xavier-Philippe, la canine vidéaste est responsable de la création de la borne et de la recherche de l’UI kit. Il s’occupe aussi des prises de photos et vidéos, ainsi que du montage du trailer et du making-of.</p>
+                        <p class=" team__text">Xavier-Philippe, le berger allemand est responsable de la création de la borne et de la recherche de l’UI kit. Il s’occupe aussi des prises de photos et vidéos, ainsi que du montage du trailer et du making-of.</p>
                     </div>
                 </li>
             </ul>
