@@ -10,7 +10,7 @@ function addTitle(){
     if($file == 'index.php'){
         return "Découvrez notre projet • iLabrador";
     } elseif($file == 'app.php'){
-        return "Expérimentez • iLabrador";
+        return "Expérimentez l'aventure • iLabrador";
     } elseif($file == 'credits.php'){
         return "Crédits • iLabrador";
     } else{
@@ -22,7 +22,7 @@ function addDescription(){
     $file = getPage();
 
     if($file == 'index.php' || $file == 'credits.php'){
-        return "Découvrez notre application qui vous offre une expérience narrative à propos des difficultés quotidiennes rencontrées par les personnes malvoyantes.";
+        return "Découvrez notre application qui vous offre une expérience narrative à propos des difficultés quotidiennes rencontrées par les personnes malvoyantes du point de vue d'un chien-guide nommé iLabrador.";
     } elseif($file == 'app.php'){
         return "Découvrez le quotidien d'une personne malvoyante ainsi que toutes les difficultés que cela implique à travers les explications d'un chien-guide nommé iLabrador.";
     } else{
