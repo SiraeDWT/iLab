@@ -29,4 +29,4 @@ include 'functions.php';
     <link rel="stylesheet" href="styles/app.css">
     <script src="scripts/app.js" defer></script>
 </head>
-<body id="top">
+<body id="top" class="<?php echo addClass(); ?>">

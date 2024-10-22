@@ -43,4 +43,18 @@ function addGroup(){
 
     return $display_names;
 }
+
+function addClass(){
+    $file = getPage();
+
+    if($file == 'index.php'){
+        return "landing";
+    } elseif($file == 'app.php'){
+        return "application";
+    } elseif($file == 'credits.php'){
+        return "credits";
+    } else{
+        return "";
+    }
+}
 ?>
