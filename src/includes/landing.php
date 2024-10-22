@@ -47,7 +47,7 @@
             <ul class="team__list team__wrapper">
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/frame.webp" srcset="assets/images/frame@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/labrador.webp" srcset="assets/images/labrador@2x.webp 2x" alt="" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Dylan</h3>
@@ -58,7 +58,7 @@
 
                 <li class="team__el team__el--even">
                     <div>
-                        <img src="assets/images/frame.webp" srcset="assets/images/frame@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/rottweiler.webp" srcset="assets/images/rottweiler@2x.webp 2x" alt="" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Éléonore</h3>
@@ -69,7 +69,7 @@
 
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/frame.webp" srcset="assets/images/frame@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/corgi.webp" srcset="assets/images/corgi@2x.webp 2x" alt="" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Noa</h3>
@@ -80,7 +80,7 @@
 
                 <li class="team__el team__el--even">
                     <div>
-                        <img src="assets/images/frame.webp" srcset="assets/images/frame@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/berger-australien.webp" srcset="assets/images/berger-australien@2x.webp 2x" alt="" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Thibault</h3>
@@ -91,12 +91,12 @@
 
                 <li class="team__el">
                     <div>
-                        <img src="assets/images/frame.webp" srcset="assets/images/frame@2x.webp 2x" alt="" class="team__img">
+                        <img src="assets/images/berger-allemand.webp" srcset="assets/images/berger-allemand@2x.webp 2x" alt="" class="team__img">
                     </div>
                     <div>
                         <h3 class="team__name">Xavier</h3>
                         <small class="team__tag">Vidéaste</small>
-                        <p class=" team__text">Xavier-Phillipe, la canine vidéaste est responsable de la création de la borne et de la recherche de l’UI kit. Il s’occupe aussi des prises de photos et vidéos, ainsi que du montage du trailer et du making-of.</p>
+                        <p class=" team__text">Xavier-Philippe, la canine vidéaste est responsable de la création de la borne et de la recherche de l’UI kit. Il s’occupe aussi des prises de photos et vidéos, ainsi que du montage du trailer et du making-of.</p>
                     </div>
                 </li>
             </ul>
