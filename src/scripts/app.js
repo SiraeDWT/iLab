@@ -482,6 +482,7 @@ if(landing || credits){
 
 if(application){
     // App
+    // ----- Keep like this -----
     // function isIpadPro(){
     //     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     //     const isIpad = /iPad/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -505,6 +506,12 @@ if(application){
     //         application.classList.remove('app--hidden');
     //     }
     // }
+    // ----- Keep like this -----
+
+    // TODO: Mettre toutes les images en webp;
+    // TODO: Eviter la saccade du toutou;
+    // TODO: Mettre les décors en SCSS et les personnages en img PHP;
+    // TODO: Faire les micro/macro-typo & alt-text;
 
 
     //position des backgrounds
