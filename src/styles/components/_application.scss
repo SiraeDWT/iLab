@@ -1,66 +1,249 @@
-.app__warning{
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $light-color;
-    background-color: $dark-color;
-    text-align: center;
-}
-
 .app{
-    width: 100%;
-    height: 100vh;
-    background-color: #13b9f5;
+    background-color: #97DAFF;
 
-    &__character{
-        width: 250px;
-        height: 250px;
-    
-        background-image: url(https://thibault-varga.be/projets/ilab/test/assets/doggo.png);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    
-        position: absolute;
-        bottom: 90px;
-        left: 0;
-        z-index: 100;
-    
-        transition:  left .2s ease;
+    &--hidden{
+        display: none;
     }
 
-    &__ground{
+    &__title{
+        position: fixed; // Hidden behind app
+    }
+
+    &__warning{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $light-color;
+        background-color: $dark-color;
+        text-align: center;
+        padding: $space-p;
+        z-index: 1000;
+
+        & h2{
+            margin-bottom: $space-h3;
+        }
+    }
+ 
+    &__container{
         width: 100%;
-        height: 100px;
-        
-        background-color: rgb(91, 213, 91);
-    
-        position: absolute;
-        bottom: 0;
-        border-top: solid #000000 3px;
-        z-index: 1;
+        height: 100vh;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
     }
 
     &__message{
-        width: 300px;
-        
-        background-color: #fff;
-        border-radius: 20px;
-        border-bottom-left-radius: 0px;
-        padding: 20px;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    
         position: absolute;
-        bottom: 350px;
-        left: 800px;
-        z-index: 50;
-    
-        opacity: 0;
-    }
-}
+        top: 100px; left: 50%;
+        transform: translate(-50%, -50%);
 
-.appear{
-    opacity: 1;
+        background-color: $dark-color;
+        color: $light-color;
+
+        border-radius: 20px;
+
+        padding: $space-h3;
+        
+        display: none;
+
+        z-index: 50;
+
+        & svg{
+            position: absolute;
+            bottom: 2px; right: 5px;
+            fill: $light-color;
+            width: $h2-size;
+            height: $h2-size;
+        }
+    }
+
+
+    
+    /* app character */
+    &__dog{
+        height: 610px;
+        width: 500px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        animation: pauseCharacter 1s infinite;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    @keyframes pauseCharacter{
+        0%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-1.png);
+        }
+        50%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-2.png);
+        }
+        99%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-1.png);
+        }
+    }
+    
+    &__dog{  
+        &--move{
+            animation: movingCharacter .5s infinite;
+            transition: left .2s ease-in-out;
+        }
+    }
+    
+    @keyframes movingCharacter {
+        0%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador-1.png);
+        }
+        33%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador-0.png);
+        }
+        66%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador-2.png);
+        }
+        99%{
+            background-image: url(../assets/images/pngs/decor-app/ilabrador-1.png);
+        }
+    }
+    
+    /* app items */
+    /* app items kids */
+    &__kid{
+        position: absolute;
+        display: none;
+        z-index: 2000;
+        width: 300px;
+        height: 480px;
+        background-image: url(../assets/images/pngs/decor-app/enfant.png);
+        background-position: 0 0;
+        background-size: cover;
+        touch-action: none; /* Désactiver le défilement pendant le drag sur mobile */
+    }
+    
+    &__kid_1{
+        right: 750px;
+        bottom: 125px;
+        z-index: 2000;
+    }
+    
+    &__kid_2{
+        right: 450px;
+        bottom: 75px;
+        z-index: 2500;
+        background-image: url(../assets/images/pngs/decor-app/girl.png);
+    }
+    
+    &__kid_3{
+        right: 150px;
+        bottom: 25px;
+        z-index: 3000;
+    }
+    
+    &__kid_4{
+        right: 500px;
+        bottom: 175px;
+        z-index: 1500;
+    }
+    
+    &__kid_5{
+        right: 200px;
+        bottom: 225px;
+        z-index: 1100;
+        background-image: url(../assets/images/pngs/decor-app/girl.png);
+    }
+    
+    /* app items bags */
+    &__bag{
+        position: absolute;
+        z-index: 2000;
+        background-position: 0 0;
+        background-size: 100% 100%;
+        touch-action: none;
+        display: none;
+    }
+    
+    &__bag_1{
+        width: 300px;
+        height: 200px;
+        right: 750px;
+        bottom: 125px;
+        z-index: 2000;
+        background-image: url(../assets/images/pngs/decor-app/bag-1.png);
+    }
+    
+    &__bag_2{
+        width: 300px;
+        height: 480px;
+        right: 450px;
+        bottom: 75px;
+        z-index: 2500;
+        background-image: url(../assets/images/pngs/decor-app/bag-2.png);
+    }
+    
+    &__bag_3{
+        width: 300px;
+        height: 480px;
+        right: 150px;
+        bottom: 25px;
+        z-index: 3000;
+        background-image: url(../assets/images/pngs/decor-app/bag-3.png);
+    }
+    
+    
+    /*app backgrounds*/
+    &__background_container{
+        width: 100%;
+        height: 100vh;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+    }
+    
+    &__background{
+        width: 100%;
+        height: 100vh;
+        transform-origin: bottom left;
+        position: absolute;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+    
+    &__background_1{
+        background-image: url(../assets/images/pngs/decor-app/chambre_jour.png);
+    }
+    
+    &__background_2{
+        background-image: url(../assets/images/pngs/decor-app/feux_rouge.png);
+        transform: rotate(90deg);
+    }
+    
+    &__background_3{
+        background-image: url(../assets/images/pngs/decor-app/gare.png);
+        transform: rotate(180deg);
+    }
+    
+    &__background_4{
+        background-image: url(../assets/images/pngs/decor-app/background_marche.png);
+        transform: rotate(270deg);
+    }
+    
+    /* modifier */
+    &__item{     
+        &--appear{
+            display: block;
+        }
+    }
+    
+    &__item{
+        &--ejected{
+            transition: 1s ease-in;
+            transform: translate( 0px, 150vh) rotate(360deg);
+        }
+    }
 }
