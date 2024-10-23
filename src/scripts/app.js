@@ -508,6 +508,21 @@ if(application){
     // }
     // ----- Keep like this -----
 
+    let beginBtn = document.getElementById('begin');
+    let rulesSection = document.querySelector('.rules');
+    let appSection = document.querySelector('.app');
+
+    beginBtn.addEventListener('click', () => {
+        rulesSection.classList.add('rules--hidden');
+        appSection.classList.add('app--show');
+    });
+
+    let reloadBtn = document.getElementById('reload');
+
+    reloadBtn.addEventListener('click', function reloadPage(){
+        location.reload();
+    })
+
     // TODO: Mettre toutes les images en webp;
     // TODO: Eviter la saccade du toutou;
     // TODO: Mettre les décors en SCSS et les personnages en img PHP;

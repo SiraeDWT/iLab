@@ -1,13 +1,58 @@
-.app{
-    // ----- Keep like this -----
-    background-color: #97DAFF;
+.application{
+    background-color: $blue-color;
+}
+
+.rules{
+    width: 100%;
+    height: 100vh;
 
     &--hidden{
         display: none;
     }
 
+    &__content{
+        margin-top: $space-h1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__title{
-        position: fixed; // Hidden behind app
+        font-size: $h1-size;
+        color: $dark-color;
+        margin-bottom: $space-p;
+    }
+
+    &__img{
+        width: 25%;
+        margin-bottom: $space-h3;
+    }
+
+    &__text{
+        width: 80%;
+        margin-bottom: $space-text;
+
+        &--last{
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn{
+        margin-top: $space-h3;
+        border: none;
+    }
+}
+
+
+
+.app{
+    // ----- Keep like this -----
+    background-color: $blue-color;
+    display: none;
+
+    &--show{
+        display: block;
     }
 
     &__warning{
@@ -24,6 +69,19 @@
 
         & h2{
             margin-bottom: $space-h3;
+        }
+    }
+
+    &__reload{
+        position: fixed;
+        z-index: 1001;
+        bottom: $space-p; right: $space-p;
+
+        border: none;
+
+        & svg{
+            width: $p-size;
+            height: $p-size;
         }
     }
  
