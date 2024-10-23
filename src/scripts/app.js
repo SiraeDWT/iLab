@@ -498,12 +498,15 @@ if(application){
     // window.onload = function(){
     //     const application = document.querySelector('.app');
     //     const deviceMessage = document.querySelector('.app__warning');
+    //     let rulesSection = document.querySelector('.rules');
 
     //     if(!isIpadPro()){
     //         application.classList.add('app--hidden');
+    //         rulesSection.classList.add('rules--hidden');
     //         deviceMessage.style.display = "block";
     //     } else{
     //         application.classList.remove('app--hidden');
+    //         rulesSection.classList.remove('rules--hidden');
     //     }
     // }
     
