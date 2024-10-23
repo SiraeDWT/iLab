@@ -53,7 +53,11 @@ a{
     border-radius: calc($space-p/2);
     padding: calc($space-p/4) calc($space-p/2);
 
+    font-family: $luciole;
+    font-weight: 400;
     font-style: italic;
+    font-size: $p-size;
+    
     transition: ease-in-out;
 
     position: relative;
