@@ -527,8 +527,6 @@ if(application){
     })
     // ----- Keep like this -----
 
-    // TODO: Mettre toutes les images en webp;
-    // TODO: Eviter la saccade du toutou;
     // TODO: Mettre les décors en SCSS et les personnages en img PHP;
     // TODO: Faire les micro/macro-typo & alt-text;
 
