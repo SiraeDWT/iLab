@@ -549,7 +549,7 @@ if(application){
         //changer le background de la chambre en version nuit
         if (posBackground1 == -360) {
             let appBg1 = document.querySelector('.app__background_1');
-            appBg1.style.backgroundImage = 'url(./assets/images/pngs/decor-app/chambre_nuit.png';
+            appBg1.style.backgroundImage = 'url(./assets/images/chambre_nuit.webp';
         }
         
         //rotation background 2
@@ -692,7 +692,7 @@ if(application){
             const rect = kid.getBoundingClientRect();
             offsetX = isTouchDevice ? event.touches[0].clientX - rect.left : event.clientX - rect.left;
             offsetY = isTouchDevice ? event.touches[0].clientY - rect.top : event.clientY - rect.top;
-            kid.style.backgroundImage = 'url(./assets/images/pngs/decor-app/mannequin.png)';
+            kid.style.backgroundImage = 'url(./assets/images/mannequin.webp)';
         }
         
         // Continuer à déplacer l'élément

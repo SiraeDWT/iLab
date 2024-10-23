@@ -139,13 +139,13 @@
     
     @keyframes pauseCharacter{
         0%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-1.png);
+            background-image: url(../assets/images/ilabrador_assis-1.webp);
         }
         50%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-2.png);
+            background-image: url(../assets/images/ilabrador_assis-2.webp);
         }
         99%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador_assis-1.png);
+            background-image: url(../assets/images/ilabrador_assis-1.webp);
         }
     }
     
@@ -158,16 +158,16 @@
     
     @keyframes movingCharacter {
         0%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador-1.png);
+            background-image: url(../assets/images/ilabrador-1.webp);
         }
         33%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador-0.png);
+            background-image: url(../assets/images/ilabrador-0.webp);
         }
         66%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador-2.png);
+            background-image: url(../assets/images/ilabrador-2.webp);
         }
         99%{
-            background-image: url(../assets/images/pngs/decor-app/ilabrador-1.png);
+            background-image: url(../assets/images/ilabrador-1.webp);
         }
     }
     
@@ -179,7 +179,7 @@
         z-index: 2000;
         width: 300px;
         height: 480px;
-        background-image: url(../assets/images/pngs/decor-app/enfant.png);
+        background-image: url(../assets/images/boy.webp);
         background-position: 0 0;
         background-size: cover;
         touch-action: none; /* Désactiver le défilement pendant le drag sur mobile */
@@ -195,7 +195,7 @@
         right: 450px;
         bottom: 75px;
         z-index: 2500;
-        background-image: url(../assets/images/pngs/decor-app/girl.png);
+        background-image: url(../assets/images/girl.webp);
     }
     
     &__kid_3{
@@ -214,7 +214,7 @@
         right: 200px;
         bottom: 225px;
         z-index: 1100;
-        background-image: url(../assets/images/pngs/decor-app/girl.png);
+        background-image: url(../assets/images/girl.webp);
     }
     
     /* app items bags */
@@ -233,7 +233,7 @@
         right: 750px;
         bottom: 125px;
         z-index: 2000;
-        background-image: url(../assets/images/pngs/decor-app/bag-1.png);
+        background-image: url(../assets/images/bag-1.webp);
     }
     
     &__bag_2{
@@ -242,7 +242,7 @@
         right: 450px;
         bottom: 75px;
         z-index: 2500;
-        background-image: url(../assets/images/pngs/decor-app/bag-2.png);
+        background-image: url(../assets/images/bag-2.webp);
     }
     
     &__bag_3{
@@ -251,7 +251,7 @@
         right: 150px;
         bottom: 25px;
         z-index: 3000;
-        background-image: url(../assets/images/pngs/decor-app/bag-3.png);
+        background-image: url(../assets/images/bag-3.webp);
     }
     
     
@@ -276,21 +276,21 @@
     }
     
     &__background_1{
-        background-image: url(../assets/images/pngs/decor-app/chambre_jour.png);
+        background-image: url(../assets/images/chambre_jour.webp);
     }
     
     &__background_2{
-        background-image: url(../assets/images/pngs/decor-app/feux_rouge.png);
+        background-image: url(../assets/images/feux_rouge.webp);
         transform: rotate(90deg);
     }
     
     &__background_3{
-        background-image: url(../assets/images/pngs/decor-app/gare.png);
+        background-image: url(../assets/images/gare.webp);
         transform: rotate(180deg);
     }
     
     &__background_4{
-        background-image: url(../assets/images/pngs/decor-app/background_marche.png);
+        background-image: url(../assets/images/magasin.webp);
         transform: rotate(270deg);
     }
     
