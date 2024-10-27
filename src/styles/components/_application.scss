@@ -106,8 +106,6 @@
         border-radius: 20px;
 
         padding: $space-h3;
-        
-        display: none;
 
         z-index: 50;
 
@@ -118,18 +116,27 @@
             width: $h2-size;
             height: $h2-size;
         }
+
+        & p{
+            margin: 0;
+            display: none;
+        }
+
+        & .app__item--appear{
+            display: block;
+        }
     }
     // ----- Keep like this -----
 
 
     
-    /* app character */
+
     &__dog{
-        height: 610px;
-        width: 500px;
+        height: 20vh;
+        width: 16vh;
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-size: auto 100%;
+        background-size: 100% 100%;
         animation: pauseCharacter 1s infinite;
         position: absolute;
         bottom: 100px;
@@ -152,7 +159,6 @@
     &__dog{  
         &--move{
             animation: movingCharacter .5s infinite;
-            transition: left .2s ease-in-out;
         }
     }
     
@@ -166,58 +172,70 @@
         66%{
             background-image: url(../assets/images/ilabrador-2.webp);
         }
-        99%{
+        100%{
             background-image: url(../assets/images/ilabrador-1.webp);
         }
     }
     
-    /* app items */
-    /* app items kids */
+
+    &__item{
+        animation: fall 1s;
+    }
+
+    @keyframes fall {
+        0%{
+            bottom: 100vh;
+        }
+        30%{
+            bottom: 100px;
+        }
+        45%{
+            bottom: 150px;
+        }
+        55%{
+            bottom: 150px;
+        }
+        70%{
+            bottom: 100px;
+        }
+        100%{
+            bottom: 100px;
+        }
+    }
+
+
     &__kid{
         position: absolute;
+        bottom: 100px;
         display: none;
         z-index: 2000;
-        width: 300px;
-        height: 480px;
-        background-image: url(../assets/images/boy.webp);
+        width: 16vh;
+        height: 25vh;
         background-position: 0 0;
         background-size: cover;
-        touch-action: none; /* Désactiver le défilement pendant le drag sur mobile */
+        touch-action: none;
     }
     
     &__kid_1{
-        right: 750px;
-        bottom: 125px;
-        z-index: 2000;
+        right: calc(50px + 32vh);
+        background-image: url(../assets/images/girl.webp);
     }
     
     &__kid_2{
-        right: 450px;
-        bottom: 75px;
-        z-index: 2500;
-        background-image: url(../assets/images/girl.webp);
+        right: calc(50px + 16vh);
+        background-image: url(../assets/images/boy.webp);
     }
     
     &__kid_3{
-        right: 150px;
-        bottom: 25px;
-        z-index: 3000;
-    }
-    
-    &__kid_4{
-        right: 500px;
-        bottom: 175px;
-        z-index: 1500;
-    }
-    
-    &__kid_5{
-        right: 200px;
-        bottom: 225px;
-        z-index: 1100;
+        right: 50px;
         background-image: url(../assets/images/girl.webp);
     }
+
+    .mannequin{
+        background-image: url(../assets/images/mannequin.webp);
+    }
     
-    /* app items bags */
+
     &__bag{
         position: absolute;
         z-index: 2000;
@@ -225,37 +243,34 @@
         background-size: 100% 100%;
         touch-action: none;
         display: none;
+        bottom: 100px;
     }
     
     &__bag_1{
-        width: 300px;
-        height: 200px;
-        right: 750px;
-        bottom: 125px;
+        width: 20vh;
+        height: 13vh;
+        right: calc(50px + 32vh);
         z-index: 2000;
         background-image: url(../assets/images/bag-1.webp);
     }
     
     &__bag_2{
-        width: 300px;
-        height: 480px;
-        right: 450px;
-        bottom: 75px;
+        width: 16vh;
+        height: 25vh;
+        right: calc(50px + 16vh);
         z-index: 2500;
         background-image: url(../assets/images/bag-2.webp);
     }
     
     &__bag_3{
-        width: 300px;
-        height: 480px;
-        right: 150px;
-        bottom: 25px;
+        width: 16vh;
+        height: 25vh;
+        right: 50px;
         z-index: 3000;
         background-image: url(../assets/images/bag-3.webp);
     }
     
     
-    /*app backgrounds*/
     &__background_container{
         width: 100%;
         height: 100vh;
@@ -264,7 +279,7 @@
         overflow: hidden;
         z-index: 10;
     }
-    
+
     &__background{
         width: 100%;
         height: 100vh;
@@ -272,39 +287,63 @@
         position: absolute;
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-size: auto 100%;
+        background-size: 100% 100%;
     }
-    
+
     &__background_1{
         background-image: url(../assets/images/chambre_jour.webp);
     }
-    
-    &__background_2{
-        background-image: url(../assets/images/feux_rouge.webp);
-        transform: rotate(90deg);
+
+    &__background_1--dark{
+        background-image: url(../assets/images/chambre_nuit.webp);
     }
-    
+
+    &__background_2{
+        transform: rotate(90deg);
+        background-image: url(../assets/images/feux_rouge-rouge.webp);
+    }
+
+    &__background_2--green{
+        background-image: url(../assets/images/feux_rouge-vert.webp);
+        animation: feux 1s;
+    }
+
+    @keyframes feux {
+        0%{
+            background-image: url(../assets/images/feux_rouge.webp);
+        }
+        90%{
+            background-image: url(../assets/images/feux_rouge.webp);
+        }
+        91%{
+            background-image: url(../assets/images/feux_rouge-vert.webp);
+        }
+        100%{
+            background-image: url(../assets/images/feux_rouge-vert.webp);
+        }
+    }
+
     &__background_3{
         background-image: url(../assets/images/gare.webp);
         transform: rotate(180deg);
     }
-    
+
     &__background_4{
         background-image: url(../assets/images/magasin.webp);
         transform: rotate(270deg);
     }
-    
+
     /* modifier */
-    &__item{     
-        &--appear{
-            display: block;
-        }
+    &__item--appear{
+        display: block;
     }
-    
-    &__item{
-        &--ejected{
-            transition: 1s ease-in;
-            transform: translate( 0px, 150vh) rotate(360deg);
-        }
+
+    &__item--hidden{
+        display: none;
+    }
+
+    &__item--ejected{
+        transition: 1s ease-in;
+        transform: translate( 0px, 150vh) rotate(360deg);
     }
 }

@@ -531,39 +531,32 @@ if(application){
     // TODO: Faire les micro/macro-typo & alt-text;
 
 
-    //position des backgrounds
     let posBackground1 = 0;
     let posBackground2 = 90;
     let posBackground3 = 180;
     let posBackground4 = 270;
 
-    //function pour changer le background
     function changeBackground(){
         
         let i = 90;
 
-        //rotation background 1
         let rotate1 = posBackground1 - i + 'deg';
         gsap.to('.app__background_1', {rotate: rotate1, duration: .5, ease: 'power4.out'});
         posBackground1 = posBackground1 - i;
 
-        //changer le background de la chambre en version nuit
         if (posBackground1 == -360) {
             let appBg1 = document.querySelector('.app__background_1');
-            appBg1.style.backgroundImage = 'url(./assets/images/chambre_nuit.webp';
+            appBg1.classList.add('app__background_1--dark');
         }
         
-        //rotation background 2
         let rotate2 = posBackground2 - i + 'deg';
         gsap.to('.app__background_2', {rotate: rotate2, duration: .5, ease: 'power4.out'});
         posBackground2 = posBackground2 - i;
 
-        //rotation background 3
         let rotate3 = posBackground3 - i + 'deg';
         gsap.to('.app__background_3', {rotate: rotate3, duration: .5, ease: 'power4.out'});
         posBackground3 = posBackground3 - i;
 
-        //apparition des sacs
         let bags = document.querySelectorAll('.app__bag');
         bags.forEach((bag) => {
             if (posBackground3 == 0) {
@@ -571,28 +564,16 @@ if(application){
             };
         });
 
-        //rotation background 4
         let rotate4 = posBackground4 - i + 'deg';
         gsap.to('.app__background_4', {rotate: rotate4, duration: .5, ease: 'power4.out'});
         posBackground4 = posBackground4 - i;
 
-        //apparition des sacs
-        let kids = document.querySelectorAll('.app__kid');
-        kids.forEach((kid) => {
-            if (posBackground4 == 0) {
-                kid.classList.add('app__item--appear');
-            };
-        });
-
     }
 
-    //bouger le dog
-    //variables
     const dog = document.querySelector('.app__dog');
     const items = document.querySelectorAll('.app__item');
     const proximityLimit = 100;
 
-    //fonction qui check si le dog est devant un item 
     function isTooClose() {
         for (let item of items) {
             const itemRect = item.getBoundingClientRect();
@@ -607,76 +588,131 @@ if(application){
     }
 
     let dogPosition = 0;
-    const dogSpeed = 25;
+    const dogSpeed = 3;
     let positionMax = window.innerWidth;
-
-    // fonction qui permet de bouger le dog si il n'est pas en face d'un item
+    let isTouching = false;
+    const message = document.querySelector('.app__message');
+    let movementEnabled = true;
+    
     function moveDog() {
-        if (!isTooClose()) {
+        if (!isTooClose() && isTouching && message.classList.contains('app__item--hidden')) {
             dogPosition += dogSpeed;
             dog.style.left = dogPosition + 'px';
             dog.classList.add('app__dog--move');
+    
+            if(posBackground1 == 0){
+                if(dogPosition == 0 ) {
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                    
+                } else if(dogPosition == 900){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
 
-            if (dogPosition > positionMax) {
+                } else if(dogPosition == 1800){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                }
 
-                dogPosition = 0; // Reset dog to the left of the screen
+            } else if(posBackground2 == 0){
+                if(dogPosition == 3 ) {
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                }
+
+            } else if(posBackground3 == 0){
+                if(dogPosition == 3 ) {
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+
+                } else if(dogPosition == 900){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+
+                } else if(dogPosition == 2355){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                }
+
+            } else if(posBackground4 == 0){
+                if(dogPosition == 3 ) {
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+
+                } else if(dogPosition == 900){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+    
+                    let kids = document.querySelectorAll('.app__kid');
+                    kids.forEach((kid) => {
+                        if (posBackground4 == 0) {
+                            kid.classList.add('app__item--appear');
+                        };
+                    });
+
+                } else if(dogPosition == 2355){
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                }
+
+            } else if(posBackground1 == -360){
+                if(dogPosition == 3 ) {
+                    message.classList.remove('app__item--hidden');
+                    movementEnabled = false;
+                    dog.classList.remove('app__dog--move');
+                }
+            }
+            
+            if(dogPosition > positionMax) {
+                
+                dogPosition = 0;
                 dog.style.transition = '0s';
                 dog.style.left = dogPosition + 'px';
                 changeBackground();
-
-            }else{
-
-                dog.style.transition = 'left .2s ease-in-out';
-
-            };
+                
+            }
+    
+            requestAnimationFrame(moveDog);
+    
         }
     }
-
-    //variables pour le message
-    let message = document.querySelector('.app__message');
-    let movementEnabled = true;
-
-    // Ajout des événements sur la touche "Espace"
-    document.addEventListener('keydown', function(event) {
-        if(event.code === 'Space' && movementEnabled === true) {
-            event.preventDefault();
-
-            //l'objet se met en mouvement lorsque la touche espace est appuyée
+    
+    document.addEventListener('touchstart', function(event) {
+        if(movementEnabled === true) {
+    
+            isTouching = true;
+                
             moveDog();
-
-            //apparition du message en fonction de la position
-            if(dogPosition == 0) {
-                message.classList.add('app__item--appear');
-                movementEnabled = false;
-                dog.classList.remove('app__dog--move');
-            };
-
-            //diparition du message en fonction de la position
-            if(dogPosition == 25) {
-                message.classList.remove('app__item--appear');
-                dog.classList.add('app__dog--move');
-            };
         };
-
     });
-
-    document.addEventListener('keyup', function(event) {
-        if(event.code === 'Space' && movementEnabled === false) {
+    
+    document.addEventListener('touchend', function(event) {
+        if(movementEnabled === false) {
             movementEnabled = true;
         };
+    
         dog.classList.remove('app__dog--move');
+            
+        isTouching = false;
     });
 
-    //bouger un enfant avec le doigt
     const kids = document.querySelectorAll('.app__kid');
     kids.forEach((kid) => {
 
         let offsetX, offsetY;
         
-        // Détecter si c'est un appareil tactile ou une souris
         const isTouchDevice = 'ontouchstart' in document.documentElement;
         
-        // Fonction pour empêcher de sortir de l'écran
         function stayInBounds(element) {
             const rect = element.getBoundingClientRect();
             const parentWidth = window.innerWidth;
@@ -688,15 +724,13 @@ if(application){
             if (rect.bottom > parentHeight) element.style.top = `${parentHeight - rect.height}px`;
         }
         
-        // Démarrer le drag
         function startDrag(event) {
             const rect = kid.getBoundingClientRect();
             offsetX = isTouchDevice ? event.touches[0].clientX - rect.left : event.clientX - rect.left;
             offsetY = isTouchDevice ? event.touches[0].clientY - rect.top : event.clientY - rect.top;
-            kid.style.backgroundImage = 'url(./assets/images/mannequin.webp)';
+            kid.classList.add('mannequin');
         }
         
-        // Continuer à déplacer l'élément
         function dragElement(event) {
             const x = isTouchDevice ? event.touches[0].clientX : event.clientX;
             const y = isTouchDevice ? event.touches[0].clientY : event.clientY;
@@ -707,7 +741,6 @@ if(application){
             stayInBounds(kid);
         }
         
-        // Stopper le drag
         function stopDrag() {
             document.removeEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
             document.removeEventListener(isTouchDevice ? "touchend" : "mouseup", stopDrag);
@@ -716,7 +749,7 @@ if(application){
             
         }
         
-        // Ajouter les écouteurs d'événements
+
         kid.addEventListener(isTouchDevice ? "touchstart" : "mousedown", (event) => {
             startDrag(event);
             document.addEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
@@ -725,16 +758,13 @@ if(application){
 
     });
 
-    //bouger un sac avec le doigt
     const bags = document.querySelectorAll('.app__bag');
     bags.forEach((bag) => {
 
         let offsetX, offsetY;
         
-        // Détecter si c'est un appareil tactile ou une souris
         const isTouchDevice = 'ontouchstart' in document.documentElement;
         
-        // Fonction pour empêcher de sortir de l'écran
         function stayInBounds(element) {
             const rect = element.getBoundingClientRect();
             const parentWidth = window.innerWidth;
@@ -746,14 +776,12 @@ if(application){
             if (rect.bottom > parentHeight) element.style.top = `${parentHeight - rect.height}px`;
         }
         
-        // Démarrer le drag
         function startDrag(event) {
             const rect = bag.getBoundingClientRect();
             offsetX = isTouchDevice ? event.touches[0].clientX - rect.left : event.clientX - rect.left;
             offsetY = isTouchDevice ? event.touches[0].clientY - rect.top : event.clientY - rect.top;
         }
         
-        // Continuer à déplacer l'élément
         function dragElement(event) {
             const x = isTouchDevice ? event.touches[0].clientX : event.clientX;
             const y = isTouchDevice ? event.touches[0].clientY : event.clientY;
@@ -764,7 +792,6 @@ if(application){
             stayInBounds(bag);
         }
         
-        // Stopper le drag
         function stopDrag() {
             document.removeEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
             document.removeEventListener(isTouchDevice ? "touchend" : "mouseup", stopDrag);
@@ -773,7 +800,6 @@ if(application){
             
         }
         
-        // Ajouter les écouteurs d'événements
         bag.addEventListener(isTouchDevice ? "touchstart" : "mousedown", (event) => {
             startDrag(event);
             document.addEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
@@ -781,4 +807,60 @@ if(application){
         });
 
     });
+
+    let button = document.querySelectorAll('.app__button');
+    const boxes = document.querySelectorAll('div.app__message > p');
+    let currentIndex = 1;
+    let messageCounter = 1;
+    let appBg2 = document.querySelector('.app__background_2');
+    
+    document.querySelector('.app__button').addEventListener('click', () => {
+        
+        boxes.forEach(box => box.classList.remove('app__item--appear'));
+
+        boxes[currentIndex].classList.add('app__item--appear');
+        
+        currentIndex = (currentIndex + 1) % boxes.length;
+        
+        if (messageCounter == 2) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 3) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 4) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 8) {
+            message.classList.add('app__item--hidden');
+            appBg2.classList.add('app__background_2--green');
+
+        } else if (messageCounter == 10) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 11) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 12) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 16) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 18) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 19) {
+            message.classList.add('app__item--hidden');
+
+        } else if (messageCounter == 20) {
+            message.classList.add('app__item--hidden');
+        }
+
+        messageCounter++;
+
+    });
+
+
+
 }
