@@ -213,6 +213,7 @@
         background-position: 0 0;
         background-size: cover;
         touch-action: none;
+        background-repeat: no-repeat;
     }
     
     &__kid_1{
@@ -291,23 +292,23 @@
 
     &__background_1{
         background-image: url(../assets/images/chambre_jour.webp);
-    }
 
-    &__background_1--dark{
-        background-image: url(../assets/images/chambre_nuit.webp);
+        &--dark{
+            background-image: url(../assets/images/chambre_nuit.webp);
+        }
     }
 
     &__background_2{
         transform: rotate(90deg);
         background-image: url(../assets/images/feux_rouge-rouge.webp);
+
+        &--green{
+            background-image: url(../assets/images/feux_rouge-vert.webp);
+            animation: feux 1s;
+        }
     }
 
-    &__background_2--green{
-        background-image: url(../assets/images/feux_rouge-vert.webp);
-        animation: feux 1s;
-    }
-
-    @keyframes feux {
+    @keyframes feux{
         0%{
             background-image: url(../assets/images/feux_rouge.webp);
         }
@@ -332,17 +333,57 @@
         transform: rotate(270deg);
     }
 
-    /* modifier */
-    &__item--appear{
-        display: block;
+    &__ending{
+        z-index: 10000;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        animation: endingOpacity 1s;
+    }
+    
+    @keyframes endingOpacity{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    } 
+    
+    &__ending_background{
+        background-color: black;
+        opacity: 0.8;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    &__ending_reload{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        border: none;
+    }
+    
+    &__ending_reload svg{
+        width: 20px;
+        height: 20px;
     }
 
-    &__item--hidden{
-        display: none;
-    }
+    &__item{
+        &--appear{
+            display: block;
+        }
 
-    &__item--ejected{
-        transition: 1s ease-in;
-        transform: translate( 0px, 150vh) rotate(360deg);
+        &--hidden{
+            display: none;
+        }
+
+        &--ejected{
+            transition: 1s ease-in;
+            transform: translate( 0px, 150vh) rotate(360deg);
+        }
     }
 }
