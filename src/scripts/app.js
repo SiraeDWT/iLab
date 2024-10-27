@@ -532,9 +532,6 @@ if(application){
     })
     // ----- Keep like this -----
 
-    // TODO: Mettre les décors en SCSS et les personnages en img PHP;
-    // TODO: Faire les micro/macro-typo & alt-text;
-
 
     let posBackground1 = 0;
     let posBackground2 = 90;
@@ -805,13 +802,12 @@ if(application){
 
     });
 
-    let button = document.querySelectorAll('.app__button');
     const boxes = document.querySelectorAll('div.app__message > p');
     let currentIndex = 1;
     let messageCounter = 1;
     let appBg2 = document.querySelector('.app__background_2');
     
-    document.querySelector('.app__button').addEventListener('click', () => {
+    document.querySelector('.app__message').addEventListener('click', () => {
         boxes.forEach(box => box.classList.remove('app__item--appear'));
         boxes[currentIndex].classList.add('app__item--appear');
         currentIndex = (currentIndex + 1) % boxes.length;
