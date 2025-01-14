@@ -84,7 +84,7 @@
             height: $p-size;
         }
     }
- 
+
     &__container{
         width: 100%;
         height: 100vh;
@@ -128,54 +128,26 @@
     // ----- Keep like this -----
 
 
-    
+
 
     &__dog{
-        height: 20vh;
-        width: 16vh;
+        height: 217px;
+        width: 217px;
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        animation: pauseCharacter 1s infinite;
+        background-image: url(../assets/images/ilabrador_assis.gif);
         position: absolute;
         bottom: 100px;
         left: 0;
         z-index: 1000;
     }
-    
-    @keyframes pauseCharacter{
-        0%{
-            background-image: url(../assets/images/ilabrador_assis-1.webp);
-        }
-        50%{
-            background-image: url(../assets/images/ilabrador_assis-2.webp);
-        }
-        100%{
-            background-image: url(../assets/images/ilabrador_assis-1.webp);
-        }
-    }
-    
-    &__dog{  
+
+    &__dog{
         &--move{
-            animation: movingCharacter .5s infinite;
+            background-image: url(../assets/images/ilabrador.gif);
         }
     }
-    
-    @keyframes movingCharacter {
-        0%{
-            background-image: url(../assets/images/ilabrador-1.webp);
-        }
-        33%{
-            background-image: url(../assets/images/ilabrador-0.webp);
-        }
-        66%{
-            background-image: url(../assets/images/ilabrador-2.webp);
-        }
-        100%{
-            background-image: url(../assets/images/ilabrador-1.webp);
-        }
-    }
-    
 
     &__item{
         animation: fall 1s;
@@ -215,17 +187,17 @@
         touch-action: none;
         background-repeat: no-repeat;
     }
-    
+
     &__kid_1{
         right: calc(50px + 32vh);
         background-image: url(../assets/images/girl.webp);
     }
-    
+
     &__kid_2{
         right: calc(50px + 16vh);
         background-image: url(../assets/images/boy.webp);
     }
-    
+
     &__kid_3{
         right: 50px;
         background-image: url(../assets/images/girl.webp);
@@ -234,7 +206,7 @@
     .mannequin{
         background-image: url(../assets/images/mannequin.webp);
     }
-    
+
 
     &__bag{
         position: absolute;
@@ -245,7 +217,7 @@
         display: none;
         bottom: 100px;
     }
-    
+
     &__bag_1{
         width: 20vh;
         height: 13vh;
@@ -253,7 +225,7 @@
         z-index: 2000;
         background-image: url(../assets/images/bag-1.webp);
     }
-    
+
     &__bag_2{
         width: 16vh;
         height: 25vh;
@@ -261,7 +233,7 @@
         z-index: 2500;
         background-image: url(../assets/images/bag-2.webp);
     }
-    
+
     &__bag_3{
         width: 16vh;
         height: 25vh;
@@ -269,8 +241,8 @@
         z-index: 3000;
         background-image: url(../assets/images/bag-3.webp);
     }
-    
-    
+
+
     &__background_container{
         width: 100%;
         height: 100vh;
@@ -341,7 +313,7 @@
         height: 100vh;
         animation: endingOpacity 1s;
     }
-    
+
     @keyframes endingOpacity{
         0%{
             opacity: 0;
@@ -349,24 +321,24 @@
         100%{
             opacity: 1;
         }
-    } 
-    
+    }
+
     &__ending_background{
         background-color: black;
         opacity: 0.8;
         width: 100%;
         height: 100vh;
     }
-    
+
     &__ending_reload{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    
+
         border: none;
     }
-    
+
     &__ending_reload svg{
         width: 20px;
         height: 20px;
