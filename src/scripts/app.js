@@ -635,7 +635,7 @@ if(application){
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
 
-                } else if(dogPosition == 1177.5){
+                } else if(dogPosition == 1176){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
@@ -659,14 +659,14 @@ if(application){
                         };
                     });
 
-                } else if(dogPosition == 1177.5){
+                } else if(dogPosition == 1176){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
                 }
 
             } else if(posBackground1 == -360){
-                if(dogPosition == 1.5 ){
+                if(dogPosition == 3 ){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
