@@ -606,12 +606,12 @@ if(application){
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
                     
-                } else if(dogPosition == 900){
+                } else if(dogPosition == 450){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
 
-                } else if(dogPosition == 1800){
+                } else if(dogPosition == 900){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
@@ -630,12 +630,12 @@ if(application){
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
 
-                } else if(dogPosition == 900){
+                } else if(dogPosition == 450){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
 
-                } else if(dogPosition == 2355){
+                } else if(dogPosition == 1177.5){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
@@ -647,7 +647,7 @@ if(application){
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
 
-                } else if(dogPosition == 900){
+                } else if(dogPosition == 450){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
@@ -659,14 +659,14 @@ if(application){
                         };
                     });
 
-                } else if(dogPosition == 2355){
+                } else if(dogPosition == 1177.5){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
                 }
 
             } else if(posBackground1 == -360){
-                if(dogPosition == 3 ){
+                if(dogPosition == 1.5 ){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');

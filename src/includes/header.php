@@ -29,4 +29,4 @@ include 'functions.php';
     <link rel="stylesheet" href="styles/app.css">
     <script src="scripts/app.js" defer></script>
 </head>
-<body style="-webkit-touch-callout: none; -webkit-user-select: none" id="top" class="<?php echo addClass(); ?>">
+<body style="height:1024px;width:1366px;-webkit-touch-callout: none; -webkit-user-select: none" id="top" class="<?php echo addClass(); ?>">
