@@ -29,4 +29,4 @@ include 'functions.php';
     <link rel="stylesheet" href="styles/app.css">
     <script src="scripts/app.js" defer></script>
 </head>
-<body style="<?php if(basename($_SERVER['PHP_SELF']) == 'app.php') echo 'width:1366px;'; ?>;-webkit-touch-callout: none; -webkit-user-select: none;" id="top" class="<?php echo addClass(); ?>">
+<body style="<?php if(basename($_SERVER['PHP_SELF']) == 'app.php') echo 'width:1366px;overflow: hidden;-webkit-touch-callout: none; -webkit-user-select: none;'; ?>" id="top" class="<?php echo addClass(); ?>">

@@ -33,10 +33,13 @@
                 <h2 class="project__title title">iLabrador, une application</h2>
                 <p class="project__text">iLabrador va vous faire vivre une journée type d’une personne ayant des déficiences visuelles au travers d’un voyage avec le chien-guide du même nom.</p>
                 <p class="project__text">L’objectif de cette application est de sensibiliser les gens aux différentes difficultés que peuvent traverser les malvoyants au quotidien via différentes situations qui peuvent paraître banales pour monsieur ou madame tout le monde.</p>
-                <p class="project__text project__text--last">Grâce à iLabrador, vous allez pouvoir vous aventurer dans plusieurs passages de la vie de tous les jour. Découvrir les aménagements mis en place pour aider les personnes ayant des difficultés visuelles mais également tout ce qui n'est pas adapté pour elles.</p>
+                <p class="project__text project__text--last">Grâce à iLabrador, vous allez pouvoir vous aventurer dans plusieurs passages de la vie de tous les jours. Découvrir les aménagements mis en place pour aider les personnes ayant des difficultés visuelles mais également tout ce qui n'est pas adapté pour elles.</p>
             </div>
             <div>
-                <img src="assets/images/video.webp" srcset="assets/images/video@2x.webp 2x" alt="GIF d'une démonstration de l'application" class="project__img">
+                <video class="project__img" muted autoplay preload="none">
+                    <source src="assets/demo.mp4" type="video/mp4">
+                    Sorry, your browser doesn’t support embedded video.
+                </video>
             </div>
         </div>
     </section>

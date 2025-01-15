@@ -1,10 +1,30 @@
+// PRELOAD IMAGES
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(../assets/images/ilabrador.webp)
+    url(../assets/images/ilabrador_assis.webp)
+    url(../assets/images/feux_rouge.webp)
+    url(../assets/images/feux_rouge-rouge.webp)
+    url(../assets/images/feux_rouge-vert.webp)
+    url(../assets/images/chambre_jour.webp)
+    url(../assets/images/chambre_nuit.webp)
+    url(../assets/images/gare.webp)
+    url(../assets/images/magasin.webp)
+    url(../assets/images/mannequin.webp)
+    url(../assets/images/girl.webp)
+    url(../assets/images/boy.webp)
+    url(../assets/images/bag-1.webp)
+    url(../assets/images/bag-2.webp)
+    url(../assets/images/bag-3.webp);
+}
+
 .application{
     background-color: $blue-color;
 }
 
 .rules{
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 
     &--hidden{
         display: none;
@@ -87,7 +107,7 @@
 
     &__container{
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         position: relative;
         top: 0;
         left: 0;
@@ -136,7 +156,7 @@
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        background-image: url(../assets/images/ilabrador_assis.gif);
+        background-image: url(../assets/images/ilabrador_assis.webp);
         position: absolute;
         bottom: 100px;
         left: 0;
@@ -145,7 +165,7 @@
 
     &__dog{
         &--move{
-            background-image: url(../assets/images/ilabrador.gif);
+            background-image: url(../assets/images/ilabrador.webp);
         }
     }
 
@@ -155,7 +175,7 @@
 
     @keyframes fall {
         0%{
-            bottom: 100vh;
+            bottom: 100dvh;
         }
         30%{
             bottom: 100px;
@@ -245,7 +265,7 @@
 
     &__background_container{
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         display: inline-block;
         position: relative;
         overflow: hidden;
@@ -254,7 +274,7 @@
 
     &__background{
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         transform-origin: bottom left;
         position: absolute;
         background-position: 0 0;
@@ -310,7 +330,7 @@
         position: absolute;
         top: 0;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         animation: endingOpacity 1s;
     }
 
@@ -327,7 +347,7 @@
         background-color: black;
         opacity: 0.8;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
     }
 
     &__ending_reload{

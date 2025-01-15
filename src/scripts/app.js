@@ -1,7 +1,7 @@
 "use strict";
 
 import { gsap } from "gsap";
-    
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -60,7 +60,7 @@ if(landing){
 
     function menuOpen() {
         document.body.classList.toggle('menu--open');
-        
+
         let menuOpen = document.body.classList.contains('menu--open');
 
         if (menuOpen) {
@@ -81,7 +81,7 @@ if(landing){
         let linkElements = document.querySelectorAll('.footer__el a');
 
         linkElements.forEach(linkElement => {
-            if (!linkElement.hasAttribute('data-original-text')) { 
+            if (!linkElement.hasAttribute('data-original-text')) {
                 linkElement.setAttribute('data-original-text', linkElement.textContent);
             }
 
@@ -93,7 +93,7 @@ if(landing){
             if (window.matchMedia('(min-width: 640px) and (max-width: 1439px)').matches) {
                 linkText[1] = '';
             } else {
-                
+
                 linkText[1] = originalLastName;
             }
 
@@ -486,15 +486,15 @@ if(application){
     // function isIpadPro(){
     //     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     //     const isIpad = /iPad/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        
+
     //     const screenWidth = window.screen.width;
     //     const screenHeight = window.screen.height;
-    
+
     //     const isIpadPro = (screenWidth === 1024 && screenHeight === 1366) || (screenWidth === 1366 && screenHeight === 1024);
-        
+
     //     return isIpad && isIpadPro;
     // }
-    
+
     // window.onload = function(){
     //     const application = document.querySelector('.app');
     //     const deviceMessage = document.querySelector('.app__warning');
@@ -509,7 +509,7 @@ if(application){
     //         rulesSection.classList.remove('rules--hidden');
     //     }
     // }
-    
+
 
     let beginBtn = document.getElementById('begin');
     let rulesSection = document.querySelector('.rules');
@@ -549,7 +549,7 @@ if(application){
             let appBg1 = document.querySelector('.app__background_1');
             appBg1.classList.add('app__background_1--dark');
         }
-        
+
         let rotate2 = posBackground2 - i + 'deg';
         gsap.to('.app__background_2', {rotate: rotate2, duration: .5, ease: 'power4.out'});
         posBackground2 = posBackground2 - i;
@@ -593,19 +593,19 @@ if(application){
     let isTouching = false;
     const message = document.querySelector('.app__message');
     let movementEnabled = true;
-    
+
     function moveDog(){
         if(!isTooClose() && isTouching && message.classList.contains('app__item--hidden')){
             dogPosition += dogSpeed;
             dog.style.left = dogPosition + 'px';
             dog.classList.add('app__dog--move');
-    
+
             if(posBackground1 == 0){
                 if(dogPosition == 0 ){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
-                    
+
                 } else if(dogPosition == 450){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
@@ -651,7 +651,7 @@ if(application){
                     message.classList.remove('app__item--hidden');
                     movementEnabled = false;
                     dog.classList.remove('app__dog--move');
-    
+
                     let kids = document.querySelectorAll('.app__kid');
                     kids.forEach((kid) => {
                         if(posBackground4 == 0){
@@ -672,19 +672,19 @@ if(application){
                     dog.classList.remove('app__dog--move');
                 }
             }
-            
-            if(dogPosition > positionMax){  
+
+            if(dogPosition > positionMax){
                 dogPosition = 0;
                 dog.style.transition = '0s';
                 dog.style.left = dogPosition + 'px';
-                changeBackground();  
+                changeBackground();
             }
-    
+
             requestAnimationFrame(moveDog);
-    
+
         }
     }
-    
+
     const ending = document.querySelector('.app__ending');
 
     document.addEventListener('touchstart', function(event) {
@@ -695,13 +695,13 @@ if(application){
             isTouching = false;
         };
     });
-    
+
     document.addEventListener('touchend', function(event){
         if(movementEnabled === false){
             movementEnabled = true;
         };
 
-        dog.classList.remove('app__dog--move');    
+        dog.classList.remove('app__dog--move');
         isTouching = false;
     });
 
@@ -709,43 +709,43 @@ if(application){
     kids.forEach((kid) => {
         let offsetX, offsetY;
         const isTouchDevice = 'ontouchstart' in document.documentElement;
-        
+
         function stayInBounds(element){
             const rect = element.getBoundingClientRect();
             const parentWidth = window.innerWidth;
             const parentHeight = window.innerHeight;
-        
+
             if (rect.left < 0) element.style.left = "0px";
             if (rect.top < 0) element.style.top = "0px";
             if (rect.right > parentWidth) element.style.left = `${parentWidth - rect.width}px`;
             if (rect.bottom > parentHeight) element.style.top = `${parentHeight - rect.height}px`;
         }
-        
+
         function startDrag(event){
             const rect = kid.getBoundingClientRect();
             offsetX = isTouchDevice ? event.touches[0].clientX - rect.left : event.clientX - rect.left;
             offsetY = isTouchDevice ? event.touches[0].clientY - rect.top : event.clientY - rect.top;
             kid.classList.add('mannequin');
         }
-        
+
         function dragElement(event){
             const x = isTouchDevice ? event.touches[0].clientX : event.clientX;
             const y = isTouchDevice ? event.touches[0].clientY : event.clientY;
-        
+
             kid.style.left = `${x - offsetX}px`;
             kid.style.top = `${y - offsetY}px`;
-        
+
             stayInBounds(kid);
         }
-        
+
         function stopDrag(){
             document.removeEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
             document.removeEventListener(isTouchDevice ? "touchend" : "mouseup", stopDrag);
             kid.classList.add('app__item--ejected');
             gsap.to(kid, {display: 'none', duration: .1, delay: 1});
-            
+
         }
-        
+
 
         kid.addEventListener(isTouchDevice ? "touchstart" : "mousedown", (event) => {
             startDrag(event);
@@ -758,42 +758,42 @@ if(application){
     bags.forEach((bag) => {
         let offsetX, offsetY;
         const isTouchDevice = 'ontouchstart' in document.documentElement;
-        
+
         function stayInBounds(element){
             const rect = element.getBoundingClientRect();
             const parentWidth = window.innerWidth;
             const parentHeight = window.innerHeight;
-        
+
             if (rect.left < 0) element.style.left = "0px";
             if (rect.top < 0) element.style.top = "0px";
             if (rect.right > parentWidth) element.style.left = `${parentWidth - rect.width}px`;
             if (rect.bottom > parentHeight) element.style.top = `${parentHeight - rect.height}px`;
         }
-        
+
         function startDrag(event){
             const rect = bag.getBoundingClientRect();
             offsetX = isTouchDevice ? event.touches[0].clientX - rect.left : event.clientX - rect.left;
             offsetY = isTouchDevice ? event.touches[0].clientY - rect.top : event.clientY - rect.top;
         }
-        
+
         function dragElement(event){
             const x = isTouchDevice ? event.touches[0].clientX : event.clientX;
             const y = isTouchDevice ? event.touches[0].clientY : event.clientY;
-        
+
             bag.style.left = `${x - offsetX}px`;
             bag.style.top = `${y - offsetY}px`;
-        
+
             stayInBounds(bag);
         }
-        
+
         function stopDrag(){
             document.removeEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
             document.removeEventListener(isTouchDevice ? "touchend" : "mouseup", stopDrag);
             bag.classList.add('app__item--ejected');
             gsap.to(bag, {display: 'none', duration: .1, delay: 1});
-            
+
         }
-        
+
         bag.addEventListener(isTouchDevice ? "touchstart" : "mousedown", (event) => {
             startDrag(event);
             document.addEventListener(isTouchDevice ? "touchmove" : "mousemove", dragElement);
@@ -806,12 +806,12 @@ if(application){
     let currentIndex = 1;
     let messageCounter = 1;
     let appBg2 = document.querySelector('.app__background_2');
-    
+
     document.querySelector('.app__message').addEventListener('click', () => {
         boxes.forEach(box => box.classList.remove('app__item--appear'));
         boxes[currentIndex].classList.add('app__item--appear');
         currentIndex = (currentIndex + 1) % boxes.length;
-        
+
         if(messageCounter == 2){
             message.classList.add('app__item--hidden');
 
