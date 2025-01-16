@@ -203,7 +203,7 @@ body::after{
         width: 18vh;
         height: 28vh;
         background-position: 0 0;
-        background-size: cover;
+        background-size: contain;
         touch-action: none;
         background-repeat: no-repeat;
     }
@@ -239,7 +239,7 @@ body::after{
     }
 
     &__bag_1{
-        width: 20vh;
+        width: 18vh;
         height: 13vh;
         right: calc(50px + 32vh);
         z-index: 2000;
@@ -255,9 +255,9 @@ body::after{
     }
 
     &__bag_3{
-        width: 16vh;
+        width: 14vh;
         height: 25vh;
-        right: 50px;
+        right: 55px;
         z-index: 3000;
         background-image: url(../assets/images/bag-3.webp);
     }
@@ -354,7 +354,7 @@ body::after{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) !important;
 
         border: none;
     }

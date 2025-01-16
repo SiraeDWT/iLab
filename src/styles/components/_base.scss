@@ -94,6 +94,7 @@ a{
 
     &:active{
         transform: scale(105%);
+        transform-origin: center;
     }
 
     & svg{
