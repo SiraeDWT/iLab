@@ -530,6 +530,30 @@ if(application){
     endingReload.addEventListener('click', function reloadPage(){
         location.reload();
     })
+
+    let idleTime = 0;
+
+    function timerIncrement() {
+        idleTime++;
+        if (idleTime >= 300) { // 5 minutes
+            if (rulesSection.classList.contains('rules--hidden')) {
+                location.reload();
+            }
+        }
+    }
+
+    window.onload = function() {
+        let idleInterval = setInterval(timerIncrement, 1000); // 1 seconde
+
+        document.addEventListener('mousemove', resetTimer);
+        document.addEventListener('keypress', resetTimer);
+        document.addEventListener('touchstart', resetTimer);
+        document.addEventListener('click', resetTimer);
+
+        function resetTimer() {
+            idleTime = 0;
+        }
+    };
     // ----- Keep like this -----
 
 
@@ -807,7 +831,7 @@ if(application){
     let messageCounter = 1;
     let appBg2 = document.querySelector('.app__background_2');
 
-    document.querySelector('.app__message').addEventListener('click', () => {
+    document.addEventListener('click', () => {
         boxes.forEach(box => box.classList.remove('app__item--appear'));
         boxes[currentIndex].classList.add('app__item--appear');
         currentIndex = (currentIndex + 1) % boxes.length;

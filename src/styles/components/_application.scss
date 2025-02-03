@@ -42,6 +42,12 @@ body::after{
         font-size: $h1-size;
         color: $dark-color;
         margin-bottom: $space-p;
+
+        & span{
+            color: $blue-color;
+
+            text-shadow: 2px 2px 0 $dark-color, -2px -2px 0 $dark-color, 2px -2px 0 $dark-color, -2px 2px 0 $dark-color;
+        }
     }
 
     &__img{

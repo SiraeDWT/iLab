@@ -1,11 +1,11 @@
 <main>
     <section class="rules">
         <div class="wrapper rules__content">
-            <h1 class="rules__title title">iLabrador</h1>
+            <h1 class="rules__title title">i<span>L</span>abrador</h1>
             <img src="assets/images/toutou.webp" srcset="assets/images/toutou@2x.webp 2x" alt="iLabrador se tenant debout en nous regardant avec la langue qui pend" class="rules__img">
             <p class="rules__text">Bienvenue sur l’expérience&nbsp;«&nbsp;iLabrador&nbsp;»&#8239;! Vous êtes sur le point de découvrir une journée typique d’une personne malvoyante racontée du point de vue d’un chien-guide.</p>
             <p class="rules__text">Cette journée sera composée de plusieurs moments clés pour comprendre à quel point ce qui peut paraître banal pour n’importe qui peut être une vraie difficulté pour les personnes avec des déficiences visuelles.</p>
-            <p class="rules__text rules__text--last">Pour déplacer iLabrador, vous devez simplement toucher l’écran. De même pour passer les dialogues. Vous pouvez également bouger les différents obstacles que vous rencontrerez en les touchant ou en les jetant.</p>
+            <p class="rules__text rules__text--last">Pour déplacer le chien guide, vous devez simplement toucher l’écran. De même pour passer les dialogues. Vous pouvez également bouger les différents obstacles que vous rencontrerez en les touchant ou en les jetant.</p>
             <button class="rules__btn btn" id="begin"><span>Commencer l’expérience</span></button>
         </div>
     </section>

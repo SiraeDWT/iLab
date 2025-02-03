@@ -1,28 +1,61 @@
 .top{
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: calc($space-p/3);
+
+    color: $light-color;
+    background: $beige-color;
+    border-radius: calc($space-p/2);
+    padding: calc($space-p/4) calc($space-p/2);
+
+    font-family: $luciole;
+    font-weight: 400;
+    font-style: italic;
+    font-size: $p-size;
+
+    transition: ease-in-out;
+
     position: fixed;
     bottom: $space-p;
     right: $space-p;
-    background-color: $beige-color;
     width: 44px;
     height: 44px;
-    border-radius: calc($space-p/2);
-
+    overflow: hidden;
     z-index: 20;
 
-    &--show{
-        display: block;
+    & *{
+        position: relative;
+        z-index: 2;
     }
 
-    &--hide{
-        display: none;
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: -100%; left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+        background: $dark-color;
+        transition: bottom 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+        
+        z-index: 0;
     }
 
-    &:hover{
-        background-color: $link-hover-color;
+    &:hover:after{
+        bottom: 0;
+        color: $link-hover-color;
+    }
 
-        & svg{
-            fill: $beige-color;
-        }
+    &:visited, &:hover, &:active{
+        color: $light-color;
+    }
+
+    &:active{
+        transform: scale(105%);
+        transform-origin: center;
     }
 
     & svg{
@@ -31,5 +64,21 @@
         top: 50%;
         left: 50%;
         fill: $grey-color-dark;
+        transition: fill 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &:hover {
+        & svg{
+        fill: $beige-color;
+        transition: fill 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+    }
+
+    &--show{
+        display: block;
+    }
+
+    &--hide{
+        display: none;
     }
 }
