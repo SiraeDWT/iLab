@@ -122,7 +122,7 @@ body::after{
 
     &__message{
         position: absolute;
-        top: 20%; left: 50%;
+        bottom: 80%; left: 50%;
         transform: translate(-50%, -50%);
 
         background-color: $dark-color;
