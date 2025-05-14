@@ -481,43 +481,22 @@ if(landing || credits){
 
 
 if(application){
-    // App
-    // ----- Keep like this -----
-    // function isIpadPro(){
-    //     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    //     const isIpad = /iPad/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-
-    //     const screenWidth = window.screen.width;
-    //     const screenHeight = window.screen.height;
-
-    //     const isIpadPro = (screenWidth === 1024 && screenHeight === 1366) || (screenWidth === 1366 && screenHeight === 1024);
-
-    //     return isIpad && isIpadPro;
-    // }
-
-    // window.onload = function(){
-    //     const application = document.querySelector('.app');
-    //     const deviceMessage = document.querySelector('.app__warning');
-    //     let rulesSection = document.querySelector('.rules');
-
-    //     if(!isIpadPro()){
-    //         application.classList.add('app--hidden');
-    //         rulesSection.classList.add('rules--hidden');
-    //         deviceMessage.style.display = "block";
-    //     } else{
-    //         application.classList.remove('app--hidden');
-    //         rulesSection.classList.remove('rules--hidden');
-    //     }
-    // }
-
-
     let beginBtn = document.getElementById('begin');
     let rulesSection = document.querySelector('.rules');
     let appSection = document.querySelector('.app');
+    let inRules = true;
 
     beginBtn.addEventListener('click', () => {
         rulesSection.classList.add('rules--hidden');
         appSection.classList.add('app--show');
+        inRules = false;
+
+        let message = document.querySelector('.app__message');
+        message.classList.remove('app__item--hidden');
+
+        const boxes = document.querySelectorAll('div.app__message > p');
+        boxes.forEach(box => box.classList.remove('app__item--appear'));
+        boxes[0].classList.add('app__item--appear');
     });
 
     let reloadBtn = document.getElementById('reload');
@@ -554,8 +533,6 @@ if(application){
             idleTime = 0;
         }
     };
-    // ----- Keep like this -----
-
 
     let posBackground1 = 0;
     let posBackground2 = 90;
@@ -827,51 +804,53 @@ if(application){
     });
 
     const boxes = document.querySelectorAll('div.app__message > p');
-    let currentIndex = 1;
+    let currentIndex = 0;
     let messageCounter = 1;
     let appBg2 = document.querySelector('.app__background_2');
 
     document.addEventListener('click', () => {
-        boxes.forEach(box => box.classList.remove('app__item--appear'));
-        boxes[currentIndex].classList.add('app__item--appear');
-        currentIndex = (currentIndex + 1) % boxes.length;
+        if (!message.classList.contains('app__item--hidden') && !inRules) {
+            boxes.forEach(box => box.classList.remove('app__item--appear'));
+            boxes[currentIndex].classList.add('app__item--appear');
+            currentIndex = (currentIndex + 1) % boxes.length;
 
-        if(messageCounter == 2){
-            message.classList.add('app__item--hidden');
+            if(messageCounter == 2){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 3){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 3){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 4){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 4){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 8){
-            message.classList.add('app__item--hidden');
-            appBg2.classList.add('app__background_2--green');
+            } else if(messageCounter == 8){
+                message.classList.add('app__item--hidden');
+                appBg2.classList.add('app__background_2--green');
 
-        } else if(messageCounter == 10){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 10){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 11){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 11){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 12){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 12){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 16){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 16){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 18){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 18){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 19){
-            message.classList.add('app__item--hidden');
+            } else if(messageCounter == 19){
+                message.classList.add('app__item--hidden');
 
-        } else if(messageCounter == 20){
-            message.classList.add('app__item--hidden');
-            ending.classList.remove('app__item--hidden');
+            } else if(messageCounter == 20){
+                message.classList.add('app__item--hidden');
+                ending.classList.remove('app__item--hidden');
+            }
+
+            messageCounter++;
         }
-
-        messageCounter++;
     });
 }

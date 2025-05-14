@@ -27,7 +27,7 @@
             <!-- scene 1 -->
             <p class="app__item--appear">Bonjour, moi c’est iLabrador. Je suis un chien guide et je vais vous emmener avec moi au cours de ma journée.</p>
             <p>Mon maître est mal voyant, ça signifie que sa vision n’est pas comme la vôtre. Il éprouve des difficultés à se déplacer seul.</p>
-            <p>Il est considéré comme PMR, PMR signifie Personnes à Mobilité Réduite. C’est un label très large, qui englobe toutes les personnes ayant des difficultés à se mouvoir dans un environnement inadapté.</p>
+            <p>Il est considéré comme PMR, PMR signifie "Personne à Mobilité Réduite". C’est un label très large, qui englobe toutes les personnes ayant des difficultés à se mouvoir dans un environnement inadapté.</p>
             <p>Maintenant au boulot, mon maître a besoin de moi&#8239;!</p>
 
             <!-- scene 2 -->
