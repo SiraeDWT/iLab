@@ -814,21 +814,18 @@ if(application){
             boxes[currentIndex].classList.add('app__item--appear');
             currentIndex = (currentIndex + 1) % boxes.length;
 
-            if(messageCounter == 2){
-                message.classList.add('app__item--hidden');
-
-            } else if(messageCounter == 3){
+            if(messageCounter == 3){
                 message.classList.add('app__item--hidden');
 
             } else if(messageCounter == 4){
                 message.classList.add('app__item--hidden');
 
-            } else if(messageCounter == 8){
+            } else if(messageCounter == 5){
+                message.classList.add('app__item--hidden');
+
+            } else if(messageCounter == 9){
                 message.classList.add('app__item--hidden');
                 appBg2.classList.add('app__background_2--green');
-
-            } else if(messageCounter == 10){
-                message.classList.add('app__item--hidden');
 
             } else if(messageCounter == 11){
                 message.classList.add('app__item--hidden');
@@ -836,10 +833,10 @@ if(application){
             } else if(messageCounter == 12){
                 message.classList.add('app__item--hidden');
 
-            } else if(messageCounter == 16){
+            } else if(messageCounter == 13){
                 message.classList.add('app__item--hidden');
 
-            } else if(messageCounter == 18){
+            } else if(messageCounter == 17){
                 message.classList.add('app__item--hidden');
 
             } else if(messageCounter == 19){
@@ -847,7 +844,11 @@ if(application){
 
             } else if(messageCounter == 20){
                 message.classList.add('app__item--hidden');
+
+            } else if(messageCounter == 21){
+                message.classList.add('app__item--hidden');
                 ending.classList.remove('app__item--hidden');
+
             }
 
             messageCounter++;
