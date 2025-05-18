@@ -10,11 +10,11 @@ include 'functions.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property ="og:site_name" content="iLab">
-    <meta property ="og:title" content="Dylan Vercalsteren">
+    <meta property ="og:title" content="iLabrador">
     <meta property ="og:description" content="<?php echo addDescription(); ?>">
     <meta property ="og:type" content="website">
-    <meta property ="og:url" content="https://dylan-vercalsteren.be/projets/ilab/">
-    <meta property ="og:image" content="https://dylan-vercalsteren.be/projets/ilab/assets/images/toutou.webp">
+    <meta property ="og:url" content="https://xavier-philippe-renk.be/projets/iLab/">
+    <meta property ="og:image" content="https://xavier-philippe-renk.be/projets/iLab/assets/images/toutou.webp">
     <meta property ="og:image:width" content="386">
     <meta property ="og:image:height" content="386">
 

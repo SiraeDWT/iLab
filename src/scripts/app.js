@@ -109,6 +109,36 @@ if(landing){
 
     checkScreenWidth();
 
+    function isIPadPro129() {
+        const w = window.screen.width;
+        const h = window.screen.height;
+        const dpr = window.devicePixelRatio;
+
+        const isPortrait = (w === 1024 && h === 1366 && dpr === 2);
+        const isLandscape = (w === 1366 && h === 1024 && dpr === 2);
+        
+        return isPortrait || isLandscape;
+    }
+
+    if (!isIPadPro129()) {
+        const launchAdventureIntroBtn = document.getElementById('launch-adventure-intro');
+        const launchAdventureNavBtn = document.getElementById('launch-adventure-nav')
+        const launchAdventureTrailerBtn = document.getElementById('launch-adventure-trailer');
+
+        if (launchAdventureIntroBtn) {
+            const parentLi = launchAdventureIntroBtn.closest('li.intro__el');
+            if (parentLi) {
+                parentLi.style.display = 'none';
+            }
+        }
+        if (launchAdventureTrailerBtn) {
+            launchAdventureTrailerBtn.style.display = 'none';
+        }
+        if (launchAdventureNavBtn) {
+            launchAdventureNavBtn.style.display = 'none';
+        }
+    }
+
 
     // GSAP Landing
     let mm = gsap.matchMedia();
@@ -264,9 +294,9 @@ if(landing){
         });
 
         gsap.from('.trailer__video', {
-            width: 0,
+            scale: 0.8,
+            autoAlpha: 0,
             duration: 0.7,
-            opacity: 0,
             scrollTrigger: {
                 trigger: '.trailer',
                 start: 'top 40%',
@@ -438,9 +468,9 @@ if(landing){
         });
 
         gsap.from('.trailer__video', {
-            width: 0,
+            scale: 0.8,
+            autoAlpha: 0,
             duration: 0.9,
-            opacity: 0,
             scrollTrigger: {
                 trigger: '.trailer',
                 start: 'top 40%',

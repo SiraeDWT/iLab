@@ -101,6 +101,14 @@
     }
 }
 
+@media only screen and (min-width: $breakpoint-tablet) and (max-width: 1086px){
+    .menu {
+        &__list{
+            gap: $space-text;
+        }
+    }
+}
+
 @media only screen and (min-width: $breakpoint-desktop){
     .wrapper{
         width: 75%;
